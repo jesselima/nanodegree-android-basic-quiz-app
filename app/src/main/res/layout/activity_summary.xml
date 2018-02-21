@@ -1,9 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
     tools:context="com.udacity.nanodegree.quizapp.SummaryActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:text="Points earned:"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"/>
+                <TextView
+                    android:id="@+id/points_earned"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="of 100"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="You hit:"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"/>
+                <TextView
+                    android:id="@+id/number_of_hit_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="of 10 questions"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_felling"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/felling_cool"
+                android:layout_gravity="center"/>
+
+            <TextView
+                style="@style/questionHeader"
+                android:text="Answers Summary"/>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
+                android:visibility="visible">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_1_header"/>
+                    <ImageView
+                        android:id="@+id/img_answer1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/question_missed"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:id="@+id/question1"
+                        style="@style/questionBody"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_1_body" />
+                    <RadioButton
+                        style="@style/radioButton"
+                        android:text="1 event"
+                        android:checked="true"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
+                android:visibility="visible">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_2_header"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/question_hit"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        style="@style/questionBody"
+                        android:layout_height="wrap_content"
+                        android:text="How jumping events athletics has? Do not consider the gender." />
+                    <RadioButton
+                        style="@style/radioButton"
+                        android:text="1 event"
+                        android:checked="true"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                style="@style/questionHeader"
+                android:text="Rate this quiz:"/>
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="2.5"
+                android:stepSize="0.5"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                style="@style/buttonDefault"
+                android:text="@string/send_by_email"
+                android:layout_gravity="center"
+                android:onClick="sendQuizByEmail"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

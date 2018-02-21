@@ -1,18 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
     tools:context="com.udacity.nanodegree.quizapp.WelcomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/welcome_message1"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/welcome_message2"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"/>
+            <TextView
+                style="@style/editTextForm"
+                android:text="@string/name" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/type_you_name"
+                android:inputType="textCapCharacters"/>
+            <TextView
+                style="@style/editTextForm"
+                android:text="@string/email" />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/type_your_email"
+                android:inputType="textEmailAddress"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/send_me_a_copy"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/send_me_more_quiz"/>
+
+            <TextView
+                style="@style/editTextForm"
+                android:text="@string/are_you_active_athlete" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/yes_for_active_athlete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"/>
+                <RadioButton
+                    android:id="@+id/no_for_active_athlete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"/>
+            </RadioGroup>
+
+            <TextView
+                style="@style/editTextForm"
+                android:text="@string/age"/>
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/btn_start_quiz"
+                style="@style/buttonDefault"
+                android:onClick="startQuiz"
+                android:text="@string/start_quiz"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
