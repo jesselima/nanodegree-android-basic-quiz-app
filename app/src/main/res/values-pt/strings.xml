@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Quiz App</string>
     <string name="welcome_thank_you">Welcome and thank You for participating of our sport quiz!</string>
-    <string name="quiz_summary_email_subject">Athletics Quiz Result from </string>
+    <string name="quiz_summary_email_subject">Athletics Quiz Result from  </string>
     <string name="welcome_message1">Welcome and thank You for participating of our Athletics quiz! Let\'s see how much do You know about athletics history.</string>
     <string name="welcome_message2">First! Let me know you a little more filling up this simple form.</string>
     <string name="question_1_header">Question 1</string>
@@ -20,13 +20,14 @@
     <string name="send_by_email">Send by email</string>
     <string name="type_you_name">Type you name</string>
     <string name="type_your_email">Type your email</string>
-    <string name="name">Name:</string>
-    <string name="email">Email:</string>
     <string name="send_me_a_copy">Send me a copy</string>
     <string name="send_me_more_quiz">Send me more quiz in the future (once a month)</string>
     <string name="are_you_active_athlete">Are You still an active athlete?</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
-    <string name="age">Age:</string>
     <string name="start_quiz">Start Quiz</string>
+    <string name="my_quiz_athletics_result">My Quiz Athletics Result:</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="age">Age:</string>
 </resources>

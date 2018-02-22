@@ -107,7 +107,7 @@
                         android:text="@string/question_1_body" />
                     <RadioButton
                         style="@style/radioButton"
-                        android:text="1 event"
+                        android:text="Answer question 1"
                         android:checked="true"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -132,7 +132,7 @@
                         android:text="How jumping events athletics has? Do not consider the gender." />
                     <RadioButton
                         style="@style/radioButton"
-                        android:text="1 event"
+                        android:text="Answer question "
                         android:checked="true"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
