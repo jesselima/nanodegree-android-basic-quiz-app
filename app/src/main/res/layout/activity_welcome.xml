@@ -48,12 +48,14 @@
                 android:hint="@string/type_your_email"
                 android:inputType="textEmailAddress"/>
             <CheckBox
+                android:id="@+id/checkbox_send_me_copy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/send_me_a_copy"/>
             <CheckBox
+                android:id="@+id/checkbox_send_me_future"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -65,14 +67,15 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/radio_group_active_athlete">
                 <RadioButton
-                    android:id="@+id/yes_for_active_athlete"
+                    android:id="@+id/active_athlete_yes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/yes"/>
                 <RadioButton
-                    android:id="@+id/no_for_active_athlete"
+                    android:id="@+id/active_athlete_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/no"/>

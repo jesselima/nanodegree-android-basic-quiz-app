@@ -5,18 +5,56 @@
     <string name="quiz_summary_email_subject">Athletics Quiz Result from\u0020</string>
     <string name="welcome_message1">Welcome and thank You for participating of our Athletics quiz! Let\'s see how much do You know about athletics history.</string>
     <string name="welcome_message2">First! Let me know you a little more filling up this simple form.</string>
+
     <string name="question_1_header">Question 1</string>
     <string name="question_1_body">How many jumping events athletics has? Do not consider the gender.</string>
+    <string name="question_1_answer_1">2 events</string>
+    <string name="question_1_answer_2">4 events</string>
+    <string name="question_1_answer_3">6 events</string>
+    <string name="question_1_answer_4">8 events</string>
+    <string name="question_1_answer_5">10 events</string>
+
     <string name="question_2_header">Question 2</string>
     <string name="question_2_body">Who is the high jump man world record holder?</string>
+    <string name="question_2_answer_1">Option 1</string>
+    <string name="question_2_answer_2">Option 2</string>
+    <string name="question_2_answer_3">Option 3</string>
+    <string name="question_2_answer_4">Javier Sotomayor</string>
+    <string name="question_2_answer_5">Option 5</string>
+
     <string name="question_3_header">Question 3</string>
-    <string name="question_3_body">...</string>
-    <string name="question_4_header">...</string>
-    <string name="question_4_body">...</string>
+    <string name="question_3_body">What are the initial of the main athletics international organization?</string>
+    <string name="question_3_answer_1">IAAF</string>
+    <string name="question_3_answer_2">WADA</string>
+    <string name="question_3_answer_3">COB</string>
+    <string name="question_3_answer_4">FINA</string>
+    <string name="question_3_answer_5">FIBA</string>
+
+    <string name="question_4_header">Question 4</string>
+    <string name="question_4_body">Who is the athlete that create the Flop High Jump Technique?</string>
+    <string name="question_4_answer_1">Mike Powell</string>
+    <string name="question_4_answer_2">Dick Fosbury</string>
+    <string name="question_4_answer_3">Michel Jhonson</string>
+    <string name="question_4_answer_4">Platt Adams</string>
+    <string name="question_4_answer_5">Mutaz Essa Barshim</string>
+
     <string name="question_5_header">Question 5</string>
-    <string name="question_5_body">...</string>
+    <string name="question_5_body">Who are the athlete with 9 gold medals in Olympic Games?</string>
+    <string name="question_5_answer_1">Michel Jhonson</string>
+    <string name="question_5_answer_2">Mohamed Farah</string>
+    <string name="question_5_answer_3">Carl Lewis</string>
+    <string name="question_5_answer_4">Platt Adams</string>
+    <string name="question_5_answer_5">Al Oerter</string>
+
     <string name="question_6_header">Question 6</string>
-    <string name="question_6_body">...</string>
+    <string name="question_6_body">How many throwing events athletics has? Do not consider the gender.</string>
+    <string name="question_6_answer_1">2 events</string>
+    <string name="question_6_answer_2">4 events</string>
+    <string name="question_6_answer_3">8 events</string>
+    <string name="question_6_answer_4">5 events</string>
+    <string name="question_6_answer_5">9 events</string>
+
+
     <string name="send_by_email">Send by email</string>
     <string name="type_you_name">Type you name</string>
     <string name="type_your_email">Type your email</string>
@@ -34,4 +72,6 @@
     <string name="points_earned">Points Earned:\u0020</string>
     <string name="hit">\u0020 You Hit</string>
     <string name="missed">\u0020 You Missed</string>
+
+
 </resources>
