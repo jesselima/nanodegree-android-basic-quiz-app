@@ -12,17 +12,17 @@ import android.widget.RadioGroup;
 
 public class QuestionsActivity extends AppCompatActivity {
 
-    // The correct answers are:
-    String correctAnswer1 = "4 events";
-    String correctAnswer2 = "Javier Sotomayor";
-    String correctAnswer3 = "IAAF";
-    String correctAnswer4 = "Dick Fosbury";
-    String correctAnswer5 = "Carl Lewis";
-    String correctAnswer6 = "4 events";
-
-    int numberOfHits = 0;
-    int pointsEarned = 0;
-    int pointsPerHit = 60;
+//    // The correct answers are:
+//    String correctAnswer1 = "4 events";
+//    String correctAnswer2 = "Javier Sotomayor";
+//    String correctAnswer3 = "IAAF";
+//    String correctAnswer4 = "Dick Fosbury";
+//    String correctAnswer5 = "Carl Lewis";
+//    String correctAnswer6 = "4 events";
+//
+//    int numberOfHits = 0;
+//    int pointsEarned = 0;
+//    int pointsPerHit = 60;
 
     View card1,card2, card3, card4, card5, card6;
     Button btn1, btn2, btn3, btn4, btn5, btnViewQuestionSummary;
@@ -54,60 +54,51 @@ public class QuestionsActivity extends AppCompatActivity {
         // Grab user answer from question 1
         RadioGroup question1 = findViewById(R.id.radio_group_question_1);
         String userAnswer1 = ((RadioButton) findViewById(question1.getCheckedRadioButtonId())).getText().toString();
-        Log.v("QuestionsActivity", "Answer Question 1: " + userAnswer1);
 
         // Grab user answer from question 2
         RadioGroup question2 = findViewById(R.id.radio_group_question_2);
         String userAnswer2 = ((RadioButton) findViewById(question2.getCheckedRadioButtonId())).getText().toString();
-        Log.v("QuestionsActivity", "Answer Question 2: " + userAnswer2);
 
         // Grab user answer from question 3
         RadioGroup question3 = findViewById(R.id.radio_group_question_3);
         String userAnswer3 = ((RadioButton) findViewById(question3.getCheckedRadioButtonId())).getText().toString();
-        Log.v("QuestionsActivity", "Answer Question 3: " + userAnswer3);
 
         // Grab user answer from question 4
         RadioGroup question4 = findViewById(R.id.radio_group_question_4);
         String userAnswer4 = ((RadioButton) findViewById(question4.getCheckedRadioButtonId())).getText().toString();
-        Log.v("QuestionsActivity", "Answer Question 4: " + userAnswer4);
 
         // Grab user answer from question 5
         RadioGroup question5 = findViewById(R.id.radio_group_question_5);
         String userAnswer5 = ((RadioButton) findViewById(question5.getCheckedRadioButtonId())).getText().toString();
-        Log.v("QuestionsActivity", "Answer Question 5: " + userAnswer5);
 
         // Grab user answer from question 6
         RadioGroup question6 = findViewById(R.id.radio_group_question_6);
         String userAnswer6 = ((RadioButton) findViewById(question6.getCheckedRadioButtonId())).getText().toString();
-        Log.v("QuestionsActivity", "Answer Question 6: " + userAnswer6);
 
-        if(userAnswer1.equals(correctAnswer1)){
-            numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
-        }
-        if(userAnswer2.equals(correctAnswer2)){
-            numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
-        }
-        if(userAnswer3.equals(correctAnswer3)){
-            numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
-        }
-        if(userAnswer4.equals(correctAnswer4)){
-            numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
-        }
-        if(userAnswer5.equals(correctAnswer5)){
-            numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
-        }
-        if(userAnswer6.equals(correctAnswer6)){
-            numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
-        }
-
-        Log.v("QuestionsActivity", "numberOfHits: " + numberOfHits);
-        Log.v("QuestionsActivity", "pointsEarned: " + pointsEarned);
+//        if(userAnswer1.equals(correctAnswer1)){
+//            numberOfHits++;
+//            pointsEarned = numberOfHits * pointsPerHit;
+//        }
+//        if(userAnswer2.equals(correctAnswer2)){
+//            numberOfHits++;
+//            pointsEarned = numberOfHits * pointsPerHit;
+//        }
+//        if(userAnswer3.equals(correctAnswer3)){
+//            numberOfHits++;
+//            pointsEarned = numberOfHits * pointsPerHit;
+//        }
+//        if(userAnswer4.equals(correctAnswer4)){
+//            numberOfHits++;
+//            pointsEarned = numberOfHits * pointsPerHit;
+//        }
+//        if(userAnswer5.equals(correctAnswer5)){
+//            numberOfHits++;
+//            pointsEarned = numberOfHits * pointsPerHit;
+//        }
+//        if(userAnswer6.equals(correctAnswer6)){
+//            numberOfHits++;
+//            pointsEarned = numberOfHits * pointsPerHit;
+//        }
 
         // Grab user form data from WelcomeActivity
         Bundle userData = getIntent().getExtras();
@@ -130,6 +121,14 @@ public class QuestionsActivity extends AppCompatActivity {
         Log.v("QuestionsActivity", "sendMeACopy: " + sendMeACopy);
         Log.v("QuestionsActivity", "sendMeFuture: " + sendMeFuture);
         Log.v("QuestionsActivity", "isAthleteActive: " + isAthleteActive);
+        Log.v("QuestionsActivity", "Answer Question 1: " + userAnswer1);
+        Log.v("QuestionsActivity", "Answer Question 2: " + userAnswer2);
+        Log.v("QuestionsActivity", "Answer Question 3: " + userAnswer3);
+        Log.v("QuestionsActivity", "Answer Question 4: " + userAnswer4);
+        Log.v("QuestionsActivity", "Answer Question 5: " + userAnswer5);
+        Log.v("QuestionsActivity", "Answer Question 6: " + userAnswer6);
+//        Log.v("QuestionsActivity", "numberOfHits: " + numberOfHits);
+//        Log.v("QuestionsActivity", "pointsEarned: " + pointsEarned);
 
 
         Intent intent = new Intent(this, SummaryActivity.class);
@@ -146,6 +145,9 @@ public class QuestionsActivity extends AppCompatActivity {
             intent.putExtra("userAnswer4", userAnswer4);
             intent.putExtra("userAnswer5", userAnswer5);
             intent.putExtra("userAnswer6", userAnswer6);
+
+//            intent.putExtra("numberOfHits", numberOfHits);
+//            intent.putExtra("pointsEarned", pointsEarned);
 
         startActivity(intent);
     }

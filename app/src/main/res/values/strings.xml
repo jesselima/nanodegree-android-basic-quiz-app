@@ -70,8 +70,11 @@
     <string name="age">Age:\u0020</string>
     <string name="number_of_hits">Number of Hits:\u0020</string>
     <string name="points_earned">Points Earned:\u0020</string>
-    <string name="hit">\u0020 You Hit</string>
-    <string name="missed">\u0020 You Missed</string>
+    <string name="hit">\u0020 You got a Hit!</string>
+    <string name="missed">\u0020 You missed it!</string>
+    <string name="rate_this_quiz">Rate this quiz:</string>
+    <string name="correct_answer">The correct answer:</string>
+    <string name="your_answer">Your answer:</string>
 
 
 </resources>

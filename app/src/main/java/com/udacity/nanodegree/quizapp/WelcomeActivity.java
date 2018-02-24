@@ -25,6 +25,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     public void startQuiz(View view){
 
+        // Grab the user input name.
         EditText editTextName = findViewById(R.id.name);
             String name = editTextName.getText().toString();
 
@@ -64,7 +65,6 @@ public class WelcomeActivity extends AppCompatActivity {
         Log.v("WelcomeActivity", "sendMeACopy: " + sendMeACopy);
         Log.v("WelcomeActivity", "sendMeFuture: " + sendMeFuture);
         Log.v("WelcomeActivity", "isAthleteActive: " + isAthleteActive);
-        //Log.v("WelcomeActivity", "isActive: " + isActive);
 
         startActivity(intent);
     }
