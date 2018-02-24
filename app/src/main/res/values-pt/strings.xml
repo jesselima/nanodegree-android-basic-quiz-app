@@ -16,11 +16,11 @@
 
     <string name="question_2_header">Question 2</string>
     <string name="question_2_body">Who is the high jump man world record holder?</string>
-    <string name="question_2_answer_1">Option 1</string>
-    <string name="question_2_answer_2">Option 2</string>
-    <string name="question_2_answer_3">Option 3</string>
+    <string name="question_2_answer_1">Mutaz Essa BARSHIM</string>
+    <string name="question_2_answer_2">Patrik SJÖBERG</string>
+    <string name="question_2_answer_3">Bohdan BONDARENKO</string>
     <string name="question_2_answer_4">Javier Sotomayor</string>
-    <string name="question_2_answer_5">Option 5</string>
+    <string name="question_2_answer_5">Igor PAKLIN</string>
 
     <string name="question_3_header">Question 3</string>
     <string name="question_3_body">What are the initial of the main athletics international organization?</string>
@@ -60,6 +60,8 @@
     <string name="type_your_email">Type your email</string>
     <string name="send_me_a_copy">Send me a copy</string>
     <string name="send_me_more_quiz">Send me more quiz in the future (once a month)</string>
+    <string name="i_wish_a_copy">Receive a quiz copy by email?</string>
+    <string name="wish_more_future_quiz">Send me more quiz in the future (once a month):</string>
     <string name="are_you_active_athlete">Are You still an active athlete?</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
@@ -73,8 +75,8 @@
     <string name="hit">\u0020 You got a Hit!</string>
     <string name="missed">\u0020 You missed it!</string>
     <string name="rate_this_quiz">Rate this quiz:</string>
-    <string name="the_correct_answer">The correct answer:</string>
+    <string name="correct_answer">The correct answer:</string>
     <string name="your_answer">Your answer:</string>
-
+    <string name="am_i_active_athlete">Am I an active athlete?</string>
 
 </resources>

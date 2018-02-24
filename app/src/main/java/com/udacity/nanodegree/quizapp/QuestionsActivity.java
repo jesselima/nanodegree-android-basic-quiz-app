@@ -12,18 +12,6 @@ import android.widget.RadioGroup;
 
 public class QuestionsActivity extends AppCompatActivity {
 
-//    // The correct answers are:
-//    String correctAnswer1 = "4 events";
-//    String correctAnswer2 = "Javier Sotomayor";
-//    String correctAnswer3 = "IAAF";
-//    String correctAnswer4 = "Dick Fosbury";
-//    String correctAnswer5 = "Carl Lewis";
-//    String correctAnswer6 = "4 events";
-//
-//    int numberOfHits = 0;
-//    int pointsEarned = 0;
-//    int pointsPerHit = 60;
-
     View card1,card2, card3, card4, card5, card6;
     Button btn1, btn2, btn3, btn4, btn5, btnViewQuestionSummary;
 
@@ -75,30 +63,6 @@ public class QuestionsActivity extends AppCompatActivity {
         RadioGroup question6 = findViewById(R.id.radio_group_question_6);
         String userAnswer6 = ((RadioButton) findViewById(question6.getCheckedRadioButtonId())).getText().toString();
 
-//        if(userAnswer1.equals(correctAnswer1)){
-//            numberOfHits++;
-//            pointsEarned = numberOfHits * pointsPerHit;
-//        }
-//        if(userAnswer2.equals(correctAnswer2)){
-//            numberOfHits++;
-//            pointsEarned = numberOfHits * pointsPerHit;
-//        }
-//        if(userAnswer3.equals(correctAnswer3)){
-//            numberOfHits++;
-//            pointsEarned = numberOfHits * pointsPerHit;
-//        }
-//        if(userAnswer4.equals(correctAnswer4)){
-//            numberOfHits++;
-//            pointsEarned = numberOfHits * pointsPerHit;
-//        }
-//        if(userAnswer5.equals(correctAnswer5)){
-//            numberOfHits++;
-//            pointsEarned = numberOfHits * pointsPerHit;
-//        }
-//        if(userAnswer6.equals(correctAnswer6)){
-//            numberOfHits++;
-//            pointsEarned = numberOfHits * pointsPerHit;
-//        }
 
         // Grab user form data from WelcomeActivity
         Bundle userData = getIntent().getExtras();
@@ -145,9 +109,6 @@ public class QuestionsActivity extends AppCompatActivity {
             intent.putExtra("userAnswer4", userAnswer4);
             intent.putExtra("userAnswer5", userAnswer5);
             intent.putExtra("userAnswer6", userAnswer6);
-
-//            intent.putExtra("numberOfHits", numberOfHits);
-//            intent.putExtra("pointsEarned", pointsEarned);
 
         startActivity(intent);
     }

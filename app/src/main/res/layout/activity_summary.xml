@@ -88,10 +88,6 @@
                 android:layout_margin="8dp"
                 android:layout_gravity="center"/>
 
-
-
-
-
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
                 android:visibility="visible">
@@ -107,37 +103,39 @@
                     <TextView
                         style="@style/summary_answers_header"
                         android:text="@string/your_answer"/>
+
                     <TextView
                         style="@style/summary_answers"
-                        android:id="@+id/user_answer1"
+                        android:id="@+id/user_answer_1"
                         android:text="User answer here..."/>
+
                     <TextView
                         style="@style/summary_answers_header"
                         android:text="@string/correct_answer"/>
+
                     <TextView
                         style="@style/summary_answers"
-                        android:id="@+id/correct_answer1"
+                        android:id="@+id/correct_answer_1"
                         android:text="Correct answer here..."/>
+
                     <LinearLayout
                         style="@style/summary_bottom_layout">
                         <ImageView
-                            android:id="@+id/img_answer1"
+                            android:id="@+id/img_answer_1"
                             style="@style/summary_bottom_layout_image"
                             android:src="@drawable/question_missed"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
                             android:id="@+id/summary_bottom_layout_text_1"
-                            android:text="You missed text... here"/>
+                            android:text="You missed this one!"/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
-
-
-
-
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
@@ -160,7 +158,7 @@
                         android:text="User answer here..."/>
                     <TextView
                         style="@style/summary_answers_header"
-                        android:text="@string/the_correct_answer"/>
+                        android:text="@string/correct_answer"/>
                     <TextView
                         style="@style/summary_answers"
                         android:id="@+id/correct_answer_2"
@@ -175,11 +173,195 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
                             android:id="@+id/summary_bottom_layout_text_2"
-                            android:text="You missed text... here"/>
+                            android:text="You missed this one!"/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
+                android:visibility="visible">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_3_header"/>
+                    <TextView
+                        android:id="@+id/question3"
+                        style="@style/questionBody"
+                        android:text="@string/question_3_body" />
+                    <TextView
+                        style="@style/summary_answers_header"
+                        android:text="Your answer:"/>
+                    <TextView
+                        style="@style/summary_answers"
+                        android:id="@+id/user_answer_3"
+                        android:text="User answer here..."/>
+                    <TextView
+                        style="@style/summary_answers_header"
+                        android:text="@string/correct_answer"/>
+                    <TextView
+                        style="@style/summary_answers"
+                        android:id="@+id/correct_answer_3"
+                        android:text="Correct answer here..."/>
+                    <LinearLayout
+                        style="@style/summary_bottom_layout">
+                        <ImageView
+                            android:id="@+id/img_answer_3"
+                            style="@style/summary_bottom_layout_image"
+                            android:src="@drawable/question_missed"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:id="@+id/summary_bottom_layout_text_3"
+                            android:text="You missed this one!"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
+                android:visibility="visible">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_4_header"/>
+                    <TextView
+                        android:id="@+id/question4"
+                        style="@style/questionBody"
+                        android:text="@string/question_4_body" />
+                    <TextView
+                        style="@style/summary_answers_header"
+                        android:text="Your answer:"/>
+                    <TextView
+                        style="@style/summary_answers"
+                        android:id="@+id/user_answer_4"
+                        android:text="User answer here..."/>
+                    <TextView
+                        style="@style/summary_answers_header"
+                        android:text="@string/correct_answer"/>
+                    <TextView
+                        style="@style/summary_answers"
+                        android:id="@+id/correct_answer_4"
+                        android:text="Correct answer here..."/>
+                    <LinearLayout
+                        style="@style/summary_bottom_layout">
+                        <ImageView
+                            android:id="@+id/img_answer_4"
+                            style="@style/summary_bottom_layout_image"
+                            android:src="@drawable/question_missed"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:id="@+id/summary_bottom_layout_text_4"
+                            android:text="You missed this one!"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
+                android:visibility="visible">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_5_header"/>
+                    <TextView
+                        android:id="@+id/question5"
+                        style="@style/questionBody"
+                        android:text="@string/question_5_body" />
+                    <TextView
+                        style="@style/summary_answers_header"
+                        android:text="Your answer:"/>
+                    <TextView
+                        style="@style/summary_answers"
+                        android:id="@+id/user_answer_5"
+                        android:text="User answer here..."/>
+                    <TextView
+                        style="@style/summary_answers_header"
+                        android:text="@string/correct_answer"/>
+                    <TextView
+                        style="@style/summary_answers"
+                        android:id="@+id/correct_answer_5"
+                        android:text="Correct answer here..."/>
+                    <LinearLayout
+                        style="@style/summary_bottom_layout">
+                        <ImageView
+                            android:id="@+id/img_answer_5"
+                            style="@style/summary_bottom_layout_image"
+                            android:src="@drawable/question_missed"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:id="@+id/summary_bottom_layout_text_5"
+                            android:text="You missed this one!"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
+                android:visibility="visible">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_6_header"/>
+                    <TextView
+                        android:id="@+id/question6"
+                        style="@style/questionBody"
+                        android:text="@string/question_6_body" />
+                    <TextView
+                        style="@style/summary_answers_header"
+                        android:text="Your answer:"/>
+                    <TextView
+                        style="@style/summary_answers"
+                        android:id="@+id/user_answer_6"
+                        android:text="User answer here..."/>
+                    <TextView
+                        style="@style/summary_answers_header"
+                        android:text="@string/correct_answer"/>
+                    <TextView
+                        style="@style/summary_answers"
+                        android:id="@+id/correct_answer_6"
+                        android:text="Correct answer here..."/>
+                    <LinearLayout
+                        style="@style/summary_bottom_layout">
+                        <ImageView
+                            android:id="@+id/img_answer_6"
+                            style="@style/summary_bottom_layout_image"
+                            android:src="@drawable/question_missed"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:id="@+id/summary_bottom_layout_text_6"
+                            android:text="You missed this one!"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
 
             <TextView
                 style="@style/questionHeader"
