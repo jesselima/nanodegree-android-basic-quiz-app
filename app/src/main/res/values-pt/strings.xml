@@ -78,5 +78,11 @@
     <string name="correct_answer">Resposta correta:</string>
     <string name="your_answer">Sua resposta:</string>
     <string name="am_i_active_athlete">Sou atleta ativo?</string>
+    <string name="of_6_questions">of 6 questions</string>
+    <string name="user_answer_here">User answer here...</string>
+    <string name="correct_answer_here">Correct answer here...</string>
+    <string name="you_missed_this_one">You missed this one!</string>
+    <string name="answers_summary">Answers Summary</string>
+    <string name="you_hit">You hit:</string>
 
 </resources>

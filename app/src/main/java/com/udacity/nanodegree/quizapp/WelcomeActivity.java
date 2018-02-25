@@ -1,21 +1,16 @@
 package com.udacity.nanodegree.quizapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 public class WelcomeActivity extends AppCompatActivity {
-
-    //View isActive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +38,6 @@ public class WelcomeActivity extends AppCompatActivity {
         // Grab user answer from question 3
         RadioGroup radioGroupAthleteActive = findViewById(R.id.radio_group_active_athlete);
         String isAthleteActive = ((RadioButton) findViewById(radioGroupAthleteActive.getCheckedRadioButtonId())).getText().toString();
-
-        // Call the onRadioButtonClicked method and check is YES or NO was selected.
-        //onRadioButtonClicked(view);
 
         EditText editTextAge = findViewById(R.id.age);
             int age = Integer.parseInt(editTextAge.getText().toString());

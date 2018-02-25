@@ -12,23 +12,24 @@ import android.widget.TextView;
 
 public class SummaryActivity extends AppCompatActivity {
 
-    String correctAnswer1 = "4 events";
-    String correctAnswer2 = "Javier Sotomayor";
-    String correctAnswer3 = "IAAF";
-    String correctAnswer4 = "Dick Fosbury";
-    String correctAnswer5 = "Carl Lewis";
-    String correctAnswer6 = "4 events";
+    String correctAnswer1 = getString(R.string.question_1_answer_2);
+    String correctAnswer2 = getString(R.string.question_2_answer_4);
+    String correctAnswer3 = getString(R.string.question_3_answer_1);
+    String correctAnswer4 = getString(R.string.question_4_answer_2);
+    String correctAnswer5 = getString(R.string.question_5_answer_3);
+    String correctAnswer6 = getString(R.string.question_6_answer_2);
 
     int pointsPerHit = 60;
-    int numberOfHits = 99;
-    int pointsEarned = 99;
+    // TODO: numberOfHits and pointsEarned must be sent do email body. Trying to figure out. :D
+    int numberOfHits = 99; // not used
+    int pointsEarned = 99; // not used
 
-    String textHit = "You got a Hit!";
-    String feelingNotSeen = "Ok. Don't worry. I din't see this!";
-    String feelingBad = "Ops! You need some research!";
-    String feelingCool = "Nice! You really know about athletics.";
-    String feelingCrazy = "Are you kidding me? You better try another quiz. This one is not for you.";
-    String feelingAwesome = "Perfect! You hit all questions. Congratulations!";
+    String textHit = getString(R.string.hit);
+    String feelingNotSeen = getString(R.string.feeling_not_seen);
+    String feelingBad = getString(R.string.feeling_bad);
+    String feelingCool = getString(R.string.feeling_cool);
+    String feelingCrazy = getString(R.string.feeling_crazy);
+    String feelingAwesome = getString(R.string.feeling_awesome);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +54,21 @@ public class SummaryActivity extends AppCompatActivity {
         int numberOfHits = userData.getInt("numberOfHits");
         int pointsEarned = userData.getInt("pointsEarned");
 
-        calculateAnswers(numberOfHits, pointsEarned, correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5, correctAnswer6, userAnswer1, userAnswer2, userAnswer3, userAnswer4, userAnswer5, userAnswer6);
-
+        calculateAnswers(numberOfHits,
+                            pointsEarned,
+                            correctAnswer1,
+                            correctAnswer2,
+                            correctAnswer3,
+                            correctAnswer4,
+                            correctAnswer5,
+                            correctAnswer6,
+                            userAnswer1,
+                            userAnswer2,
+                            userAnswer3,
+                            userAnswer4,
+                            userAnswer5,
+                            userAnswer6);
     }
-
 
     public void calculateAnswers(int numberOfHits,
                                     int pointsEarned,
@@ -102,7 +114,6 @@ public class SummaryActivity extends AppCompatActivity {
         userAnswerTextView6.setText(userAnswer6);
         TextView correctAnswerTextView6 = findViewById(R.id.correct_answer_6);
         correctAnswerTextView6.setText(correctAnswer6);
-
 
         if(userAnswer1.equals(correctAnswer1)){
             numberOfHits++;
@@ -172,8 +183,8 @@ public class SummaryActivity extends AppCompatActivity {
         }
 
         // Testing number of hits and points earned.
-        Log.v("SummaryActivity", "Acertos on calculateAnswers 2: " + numberOfHits);// ok!
-        Log.v("SummaryActivity", "Pontos on calculateAnswers 2: " + pointsEarned); // ok!
+        Log.v("SummaryActivity", "numberOfHits: " + numberOfHits);// ok!
+        Log.v("SummaryActivity", "numberOfHits: " + pointsEarned); // ok!
 
         TextView pointsTextView = findViewById(R.id.points_earned);
         pointsTextView.setText(String.valueOf(pointsEarned));
@@ -215,10 +226,7 @@ public class SummaryActivity extends AppCompatActivity {
             TextView textFelling = findViewById(R.id.text_feeling);
             textFelling.setText(feelingAwesome);
         }
-
-
     }
-
 
     public void sendQuizByEmail(View view){
 

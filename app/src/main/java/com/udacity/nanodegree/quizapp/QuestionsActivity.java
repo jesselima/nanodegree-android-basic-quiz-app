@@ -35,7 +35,6 @@ public class QuestionsActivity extends AppCompatActivity {
 
         btnViewQuestionSummary = findViewById(R.id.btn_view_summary);
         btnFinish = findViewById(R.id.btn_finish);
-
     }
 
     public void viewSummary(View view){
@@ -64,7 +63,6 @@ public class QuestionsActivity extends AppCompatActivity {
         RadioGroup question6 = findViewById(R.id.radio_group_question_6);
         String userAnswer6 = ((RadioButton) findViewById(question6.getCheckedRadioButtonId())).getText().toString();
 
-
         // Grab user form data from WelcomeActivity
         Bundle userData = getIntent().getExtras();
         if (userData == null) {
@@ -84,14 +82,12 @@ public class QuestionsActivity extends AppCompatActivity {
             intent.putExtra("sendMeACopy", sendMeACopy);
             intent.putExtra("sendMeFuture", sendMeFuture);
             intent.putExtra("isAthleteActive", isAthleteActive);
-
             intent.putExtra("userAnswer1", userAnswer1);
             intent.putExtra("userAnswer2", userAnswer2);
             intent.putExtra("userAnswer3", userAnswer3);
             intent.putExtra("userAnswer4", userAnswer4);
             intent.putExtra("userAnswer5", userAnswer5);
             intent.putExtra("userAnswer6", userAnswer6);
-
         startActivity(intent);
     }
 

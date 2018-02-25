@@ -54,7 +54,6 @@
     <string name="question_6_answer_4">5 events</string>
     <string name="question_6_answer_5">9 events</string>
 
-
     <string name="send_by_email">Send by email</string>
     <string name="type_you_name">Type you name</string>
     <string name="type_your_email">Type your email</string>
@@ -78,5 +77,17 @@
     <string name="correct_answer">The correct answer:</string>
     <string name="your_answer">Your answer:</string>
     <string name="am_i_active_athlete">Am I an active athlete?</string>
+
+    <string name="feeling_not_seen">OK. Don\'t worry. I din\'t see this!</string>
+    <string name="feeling_bad">Ops! You need some research!</string>
+    <string name="feeling_cool">Nice! You really know about athletics.</string>
+    <string name="feeling_crazy">Are you kidding me? You better try another quiz. This one is not for you.</string>
+    <string name="feeling_awesome">Perfect! You hit all questions. Congratulations!</string>
+    <string name="of_6_questions">of 6 questions</string>
+    <string name="user_answer_here">User answer here...</string>
+    <string name="correct_answer_here">Correct answer here...</string>
+    <string name="you_missed_this_one">You\'ve missed this one!</string>
+    <string name="answers_summary">Answers Summary</string>
+    <string name="you_hit">You hit:</string>
 
 </resources>
