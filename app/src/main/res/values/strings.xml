@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Quiz App</string>
-    <string name="welcome_thank_you">Welcome and thank You for participating of our sport quiz!</string>
+    <string name="welcome_thank_you">Welcome! Thank you for participating of our athletics quiz!</string>
     <string name="quiz_summary_email_subject">Athletics Quiz Result from\u0020</string>
-    <string name="welcome_message1">Welcome and thank You for participating of our Athletics quiz! Let\'s see how much do You know about athletics history.</string>
+    <string name="welcome_message1">Welcome! thank you for participating of our Athletics quiz! Let\'s see how much do You know about athletics history.</string>
     <string name="welcome_message2">First! Let me know you a little more filling up this simple form.</string>
 
     <string name="question_1_header">Question 1</string>
-    <string name="question_1_body">How many jumping events athletics has? Do not consider the gender.</string>
+    <string name="question_1_body">There are how many jumping events athletics? Do not consider the gender.</string>
     <string name="question_1_answer_1">2 events</string>
     <string name="question_1_answer_2">4 events</string>
     <string name="question_1_answer_3">6 events</string>
@@ -15,7 +15,7 @@
     <string name="question_1_answer_5">10 events</string>
 
     <string name="question_2_header">Question 2</string>
-    <string name="question_2_body">Who is the high jump man world record holder?</string>
+    <string name="question_2_body">Who is the world record holder of high jump?</string>
     <string name="question_2_answer_1">Mutaz Essa BARSHIM</string>
     <string name="question_2_answer_2">Patrik SJÖBERG</string>
     <string name="question_2_answer_3">Bohdan BONDARENKO</string>
@@ -23,7 +23,7 @@
     <string name="question_2_answer_5">Igor PAKLIN</string>
 
     <string name="question_3_header">Question 3</string>
-    <string name="question_3_body">What are the initial of the main athletics international organization?</string>
+    <string name="question_3_body">What are the initials of the main athletics international organization?</string>
     <string name="question_3_answer_1">IAAF</string>
     <string name="question_3_answer_2">WADA</string>
     <string name="question_3_answer_3">COB</string>
@@ -31,7 +31,7 @@
     <string name="question_3_answer_5">FIBA</string>
 
     <string name="question_4_header">Question 4</string>
-    <string name="question_4_body">Who is the athlete that create the Flop High Jump Technique?</string>
+    <string name="question_4_body">Who was the athlete that created the Flop High Jump Technique?</string>
     <string name="question_4_answer_1">Mike Powell</string>
     <string name="question_4_answer_2">Dick Fosbury</string>
     <string name="question_4_answer_3">Michel Jhonson</string>
@@ -47,7 +47,7 @@
     <string name="question_5_answer_5">Al Oerter</string>
 
     <string name="question_6_header">Question 6</string>
-    <string name="question_6_body">How many throwing events athletics has? Do not consider the gender.</string>
+    <string name="question_6_body">There are how many throwing events athletics? Do not consider the gender.</string>
     <string name="question_6_answer_1">2 events</string>
     <string name="question_6_answer_2">4 events</string>
     <string name="question_6_answer_3">8 events</string>
@@ -78,6 +78,5 @@
     <string name="correct_answer">The correct answer:</string>
     <string name="your_answer">Your answer:</string>
     <string name="am_i_active_athlete">Am I an active athlete?</string>
-
 
 </resources>

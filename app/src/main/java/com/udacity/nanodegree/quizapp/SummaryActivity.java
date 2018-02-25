@@ -1,15 +1,12 @@
 package com.udacity.nanodegree.quizapp;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,14 +19,16 @@ public class SummaryActivity extends AppCompatActivity {
     String correctAnswer5 = "Carl Lewis";
     String correctAnswer6 = "4 events";
 
-
     int pointsPerHit = 60;
-    int pointsEarned = 0;
-    int numberOfHits = 0;
+    int numberOfHits = 99;
+    int pointsEarned = 99;
 
     String textHit = "You got a Hit!";
-
-    ImageView imageAnswer;
+    String feelingNotSeen = "Ok. Don't worry. I din't see this!";
+    String feelingBad = "Ops! You need some research!";
+    String feelingCool = "Nice! You really know about athletics.";
+    String feelingCrazy = "Are you kidding me? You better try another quiz. This one is not for you.";
+    String feelingAwesome = "Perfect! You hit all questions. Congratulations!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,20 +53,7 @@ public class SummaryActivity extends AppCompatActivity {
         int numberOfHits = userData.getInt("numberOfHits");
         int pointsEarned = userData.getInt("pointsEarned");
 
-        calculateAnswers(numberOfHits,
-                         pointsEarned,
-                         correctAnswer1,
-                         correctAnswer2,
-                         correctAnswer3,
-                         correctAnswer4,
-                         correctAnswer5,
-                         correctAnswer6,
-                         userAnswer1,
-                         userAnswer2,
-                         userAnswer3,
-                         userAnswer4,
-                         userAnswer5,
-                         userAnswer6);
+        calculateAnswers(numberOfHits, pointsEarned, correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5, correctAnswer6, userAnswer1, userAnswer2, userAnswer3, userAnswer4, userAnswer5, userAnswer6);
 
     }
 
@@ -129,7 +115,6 @@ public class SummaryActivity extends AppCompatActivity {
             textAnswerTextView1.setText(textHit);
             textAnswerTextView1.setTextColor(ContextCompat.getColor(this, R.color.correctAnswer));
         }
-
         if(userAnswer2.equals(correctAnswer2)){
             numberOfHits++;
             pointsEarned = numberOfHits * pointsPerHit;
@@ -141,7 +126,6 @@ public class SummaryActivity extends AppCompatActivity {
             textAnswerTextView2.setText(textHit);
             textAnswerTextView2.setTextColor(ContextCompat.getColor(this, R.color.correctAnswer));
         }
-
         if(userAnswer3.equals(correctAnswer3)){
             numberOfHits++;
             pointsEarned = numberOfHits * pointsPerHit;
@@ -187,6 +171,7 @@ public class SummaryActivity extends AppCompatActivity {
             img6.setImageResource(R.drawable.question_hit);
         }
 
+        // Testing number of hits and points earned.
         Log.v("SummaryActivity", "Acertos on calculateAnswers 2: " + numberOfHits);// ok!
         Log.v("SummaryActivity", "Pontos on calculateAnswers 2: " + pointsEarned); // ok!
 
@@ -195,6 +180,42 @@ public class SummaryActivity extends AppCompatActivity {
 
         TextView hitsTextView = findViewById(R.id.number_of_hit_questions);
         hitsTextView.setText(String.valueOf(numberOfHits));
+
+        if(numberOfHits < 1) {
+            ImageView imgFeeling = findViewById(R.id.img_feeling);
+            imgFeeling.setImageResource(R.drawable.feeling_not_seen);
+
+            TextView textFelling = findViewById(R.id.text_feeling);
+            textFelling.setText(feelingNotSeen);
+
+        }else if(numberOfHits <= 2){
+            ImageView imgFeeling = findViewById(R.id.img_feeling);
+            imgFeeling.setImageResource(R.drawable.feeling_crazy);
+
+            TextView textFelling = findViewById(R.id.text_feeling);
+            textFelling.setText(feelingCrazy);
+
+        }else if(numberOfHits <=4){
+            ImageView imgFeeling = findViewById(R.id.img_feeling);
+            imgFeeling.setImageResource(R.drawable.feeling_bad);
+
+            TextView textFelling = findViewById(R.id.text_feeling);
+            textFelling.setText(feelingBad);
+
+        }else if(numberOfHits == 5){
+            ImageView imgFeeling = findViewById(R.id.img_feeling);
+            imgFeeling.setImageResource(R.drawable.feeling_cool);
+
+            TextView textFelling = findViewById(R.id.text_feeling);
+            textFelling.setText(feelingCool);
+        }else{
+            ImageView imgFeeling = findViewById(R.id.img_feeling);
+            imgFeeling.setImageResource(R.drawable.feeling_perfect);
+
+            TextView textFelling = findViewById(R.id.text_feeling);
+            textFelling.setText(feelingAwesome);
+        }
+
 
     }
 
@@ -228,7 +249,6 @@ public class SummaryActivity extends AppCompatActivity {
         String userAnswer5 = userData.getString("userAnswer5");
         String userAnswer6 = userData.getString("userAnswer6");
 
-        // este não enxerga o resultado do calculo e pontos e acertos
         String userSummary = addDataToEmailSummary(name,
                                             email,
                                             age,
@@ -267,7 +287,7 @@ public class SummaryActivity extends AppCompatActivity {
     private String addDataToEmailSummary(String name,
                                     String email,
                                     int age,
-                                    int numberOfHits,
+                                    int hits,
                                     int pointsEarned,
                                     String userAnswer1,
                                     String userAnswer2,
@@ -293,7 +313,7 @@ public class SummaryActivity extends AppCompatActivity {
         userSummaryData += "\n " + getString(R.string.age) + age;
 
         // Points
-        userSummaryData += "\n\n " + getString(R.string.number_of_hits) + numberOfHits;
+        userSummaryData += "\n\n " + getString(R.string.number_of_hits) + hits;
         userSummaryData += "\n " + getString(R.string.points_earned) + pointsEarned;
 
         // Questions and answers

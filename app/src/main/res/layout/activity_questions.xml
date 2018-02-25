@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:progress="0"
+        android:progress="10"
         android:max="100"/>
 
     <ScrollView
@@ -37,7 +37,7 @@
                        android:text="@string/question_1_header"/>
                     <TextView
                        style="@style/questionBody"
-                       android:text="How many jumping events athletics has? Do not consider the gender."/>
+                       android:text="@string/question_1_body"/>
                     <RadioGroup
                        style="@style/radioGroupRoot"
                         android:id="@+id/radio_group_question_1">
@@ -47,19 +47,19 @@
                                android:id="@+id/q1_option_1"/>
                            <RadioButton
                                style="@style/radioButton"
-                               android:text="2 events"
+                               android:text="@string/question_1_answer_2"
                                android:id="@+id/q1_option_2"/>
                            <RadioButton
                                style="@style/radioButton"
-                               android:text="4 events"
+                               android:text="@string/question_1_answer_3"
                                android:id="@+id/q1_option_3"/>
                            <RadioButton
                                style="@style/radioButton"
-                               android:text="6 events"
+                               android:text="@string/question_1_answer_4"
                                android:id="@+id/q1_option_4"/>
                             <RadioButton
                                style="@style/radioButton"
-                               android:text="10 events"
+                               android:text="@string/question_1_answer_5"
                                 android:id="@+id/q1_option_5"/>
                     </RadioGroup>
                </LinearLayout>
@@ -235,13 +235,19 @@
                </LinearLayout>
             </android.support.v7.widget.CardView>
 
-
-            <Button
-                style="@style/buttonDefault"
-                android:onClick="viewSummary"
-                android:id="@+id/btn_view_summary"
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
                 android:visibility="gone"
-                android:text="See Answers Summary"/>
+                android:id="@+id/card_finish">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/cardFimBaseLayout"
+                        android:text="You finish the quiz"/>
+                 </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
             <Button
                 style="@style/buttonDefault"
                 android:onClick="hideCard1show2"
@@ -266,12 +272,28 @@
                 android:id="@+id/hideCard4show5"
                 android:text="Next Question"
                 android:visibility="gone"/>
+
             <Button
                 style="@style/buttonDefault"
                 android:onClick="hideCard5show6"
                 android:id="@+id/hideCard5show6"
                 android:text="Next Question"
                 android:visibility="gone"/>
+
+            <Button
+                style="@style/buttonDefault"
+                android:onClick="finish"
+                android:id="@+id/btn_finish"
+                android:text="FINISH"
+                android:visibility="gone"/>
+
+            <Button
+                style="@style/buttonDefault"
+                android:onClick="viewSummary"
+                android:id="@+id/btn_view_summary"
+                android:visibility="gone"
+                android:text="See Answers Summary"/>
+
         </LinearLayout>
     </ScrollView>
 

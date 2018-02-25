@@ -4,7 +4,6 @@ package com.udacity.nanodegree.quizapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -12,8 +11,8 @@ import android.widget.RadioGroup;
 
 public class QuestionsActivity extends AppCompatActivity {
 
-    View card1,card2, card3, card4, card5, card6;
-    Button btn1, btn2, btn3, btn4, btn5, btnViewQuestionSummary;
+    View card1,card2, card3, card4, card5, card6, cardFinish;
+    Button btn1, btn2, btn3, btn4, btn5, btnViewQuestionSummary, btnFinish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +25,7 @@ public class QuestionsActivity extends AppCompatActivity {
         card4 = findViewById(R.id.card_question_4);
         card5 = findViewById(R.id.card_question_5);
         card6 = findViewById(R.id.card_question_6);
+        cardFinish = findViewById(R.id.card_finish);
 
         btn1 = findViewById(R.id.hideCard1show2);
         btn2 = findViewById(R.id.hideCard2show3);
@@ -34,6 +34,7 @@ public class QuestionsActivity extends AppCompatActivity {
         btn5 = findViewById(R.id.hideCard5show6);
 
         btnViewQuestionSummary = findViewById(R.id.btn_view_summary);
+        btnFinish = findViewById(R.id.btn_finish);
 
     }
 
@@ -75,25 +76,6 @@ public class QuestionsActivity extends AppCompatActivity {
         boolean sendMeACopy = userData.getBoolean("sendMeACopy");
         boolean sendMeFuture = userData.getBoolean("sendMeFuture");
         String isAthleteActive = userData.getString("isAthleteActive");
-
-        //int points = userData.getInt("points");
-
-        // Testing user form that comes from WelcomeActivity...
-        Log.v("Questions-Activity", "Name: " + name);
-        Log.v("QuestionsActivity", "Email: " + email);
-        Log.v("QuestionsActivity", "Age: " + age);
-        Log.v("QuestionsActivity", "sendMeACopy: " + sendMeACopy);
-        Log.v("QuestionsActivity", "sendMeFuture: " + sendMeFuture);
-        Log.v("QuestionsActivity", "isAthleteActive: " + isAthleteActive);
-        Log.v("QuestionsActivity", "Answer Question 1: " + userAnswer1);
-        Log.v("QuestionsActivity", "Answer Question 2: " + userAnswer2);
-        Log.v("QuestionsActivity", "Answer Question 3: " + userAnswer3);
-        Log.v("QuestionsActivity", "Answer Question 4: " + userAnswer4);
-        Log.v("QuestionsActivity", "Answer Question 5: " + userAnswer5);
-        Log.v("QuestionsActivity", "Answer Question 6: " + userAnswer6);
-//        Log.v("QuestionsActivity", "numberOfHits: " + numberOfHits);
-//        Log.v("QuestionsActivity", "pointsEarned: " + pointsEarned);
-
 
         Intent intent = new Intent(this, SummaryActivity.class);
             intent.putExtra("name", name);
@@ -189,6 +171,13 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 500);
         btn5.setVisibility(View.GONE);
+        btnFinish.setVisibility(View.VISIBLE);
+    }
+
+    public void finish(View view){
+        card6.setVisibility(View.GONE);
+        cardFinish.setVisibility(View.VISIBLE);
+        btnFinish.setVisibility(View.GONE);
         btnViewQuestionSummary.setVisibility(View.VISIBLE);
     }
 
