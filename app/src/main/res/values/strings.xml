@@ -3,7 +3,7 @@
     <string name="app_name">Quiz App</string>
     <string name="welcome_thank_you">Welcome! Thank you for participating of our athletics quiz!</string>
     <string name="quiz_summary_email_subject">Athletics Quiz Result from\u0020</string>
-    <string name="welcome_message1">Welcome! thank you for participating of our Athletics quiz! Let\'s see how much do You know about athletics history.</string>
+    <string name="welcome_message1">Welcome! Thank You for participating of our Athletics quiz! Let\'s see how much do You know about athletics history.</string>
     <string name="welcome_message2">First! Let me know you a little more filling up this simple form.</string>
     <string name="question_1_header">Question 1</string>
     <string name="question_1_body">There are how many jumping events athletics? Do not consider the gender.</string>
@@ -77,8 +77,8 @@
     <string name="feeling_crazy">Are you kidding me? You better try another quiz. This one is not for you.</string>
     <string name="feeling_awesome">Perfect! You hit all questions. Congratulations!</string>
     <string name="of_6_questions">of 7 questions</string>
-    <string name="user_answer_here">User answer here...</string>
-    <string name="correct_answer_here">Correct answer here...</string>
+    <string name="user_answer_here">User answer here</string>
+    <string name="correct_answer_here">Correct answer here</string>
     <string name="you_missed_this_one">You\'ve missed this one!</string>
     <string name="answers_summary">Answers Summary</string>
     <string name="you_hit">You hit:</string>
