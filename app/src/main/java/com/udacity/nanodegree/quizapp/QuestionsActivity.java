@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 
 public class QuestionsActivity extends AppCompatActivity {
@@ -48,6 +49,13 @@ public class QuestionsActivity extends AppCompatActivity {
     // ######## HIDE AND SHOW CARDS METHODS #########
 
     public void btn1hideCard1show2(View view){
+
+        RadioGroup radioGroupCheck = findViewById(R.id.radio_group_question_1);
+        if (radioGroupCheck.getCheckedRadioButtonId() == -1){
+            Toast.makeText(this, R.string.select_one_of_the_answers, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         card1.postDelayed(new Runnable() {
             public void run() {
                 card1.setVisibility(View.GONE);
@@ -72,9 +80,18 @@ public class QuestionsActivity extends AppCompatActivity {
 
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
+
+
     }
 
     public void btn2hideCard2show3(View view){
+
+        RadioGroup radioGroupCheck = findViewById(R.id.radio_group_question_2);
+        if (radioGroupCheck.getCheckedRadioButtonId() == -1){
+            Toast.makeText(this, R.string.select_one_of_the_answers, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         card2.postDelayed(new Runnable() {
             public void run() {
                 card2.setVisibility(View.GONE);
@@ -102,6 +119,13 @@ public class QuestionsActivity extends AppCompatActivity {
     }
 
     public void btn3hideCard3show4(View view){
+
+        RadioGroup radioGroupCheck = findViewById(R.id.radio_group_question_3);
+        if (radioGroupCheck.getCheckedRadioButtonId() == -1){
+            Toast.makeText(this, R.string.select_one_of_the_answers, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         card3.postDelayed(new Runnable() {
             public void run() {
                 card3.setVisibility(View.GONE);
@@ -129,6 +153,13 @@ public class QuestionsActivity extends AppCompatActivity {
     }
 
     public void btn4hideCard4show5(View view){
+
+        RadioGroup radioGroupCheck = findViewById(R.id.radio_group_question_4);
+        if (radioGroupCheck.getCheckedRadioButtonId() == -1){
+            Toast.makeText(this, R.string.select_one_of_the_answers, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         card4.postDelayed(new Runnable() {
             public void run() {
                 card4.setVisibility(View.GONE);
@@ -156,6 +187,13 @@ public class QuestionsActivity extends AppCompatActivity {
     }
 
     public void btn5hideCard5show6(View view){
+
+        RadioGroup radioGroupCheck = findViewById(R.id.radio_group_question_5);
+        if (radioGroupCheck.getCheckedRadioButtonId() == -1){
+            Toast.makeText(this, R.string.select_one_of_the_answers, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         card5.postDelayed(new Runnable() {
             public void run() {
                 card5.setVisibility(View.GONE);
@@ -183,6 +221,13 @@ public class QuestionsActivity extends AppCompatActivity {
     }
 
     public void btn6hideCard6showComment(View view){
+
+        RadioGroup radioGroupCheck = findViewById(R.id.radio_group_question_6);
+        if (radioGroupCheck.getCheckedRadioButtonId() == -1){
+            Toast.makeText(this, R.string.select_one_of_the_answers, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         card6.postDelayed(new Runnable() {
             public void run() {
                 card6.setVisibility(View.GONE);

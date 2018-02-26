@@ -76,7 +76,7 @@
     <string name="feeling_cool">Nice! You really know about athletics.</string>
     <string name="feeling_crazy">Are you kidding me? You better try another quiz. This one is not for you.</string>
     <string name="feeling_awesome">Perfect! You hit all questions. Congratulations!</string>
-    <string name="of_6_questions">of 7 questions</string>
+    <string name="of_6_questions">of 6 questions</string>
     <string name="user_answer_here">User answer here</string>
     <string name="correct_answer_here">Correct answer here</string>
     <string name="you_missed_this_one">You\'ve missed this one!</string>
@@ -93,4 +93,5 @@
     <string name="next_question_6_7">Next Question 6 of 7</string>
     <string name="next_question_7_7">Next Question 7 of 7</string>
     <string name="finish">FINISH</string>
+    <string name="select_one_of_the_answers">Select one of the answers.</string>
 </resources>

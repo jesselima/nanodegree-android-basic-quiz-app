@@ -76,7 +76,7 @@
     <string name="feeling_cool">Legal! Você realmente sabe sobre atletismo.</string>
     <string name="feeling_crazy">Tá de brincadeira? Melhor você tentar outro quiz. Este aqui não é pra você.</string>
     <string name="feeling_awesome">Perfeito! Você acertou todas as questões. Parabéns!</string>
-    <string name="of_6_questions">de 7 questões</string>
+    <string name="of_6_questions">de 6 questões</string>
     <string name="user_answer_here">Sua resposta aqui</string>
     <string name="correct_answer_here">Resposta correta aqui</string>
     <string name="you_missed_this_one">Você errou esta!</string>
@@ -93,4 +93,5 @@
     <string name="next_question_6_7">Próxima Pergunta 6 de 7</string>
     <string name="next_question_7_7">Próxima Pergunta 7 de 7</string>
     <string name="finish">FINALIZAR</string>
+    <string name="select_one_of_the_answers">Selecione uma das respostas.</string>
 </resources>
