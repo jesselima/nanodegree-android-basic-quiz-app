@@ -1,43 +1,155 @@
 package com.udacity.nanodegree.quizapp;
 
+// TODO: Fix activity refresh when orientation changes to landscape
+// TODO: UPDATE VALUE OF PROGRESS BAR WHEN CLICK NEXT BUTTON
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+
 public class QuestionsActivity extends AppCompatActivity {
 
-    View card1,card2, card3, card4, card5, card6, cardFinish;
-    Button btn1, btn2, btn3, btn4, btn5, btnViewQuestionSummary, btnFinish;
+    View card1,card2, card3, card4, card5, card6, cardComment, cardFinish;
+    Button btn1hideCard1show2, btn2hideCard2show3, btn3hideCard3show4, btn4hideCard4show5, btn5hideCard5show6, btn6hideCard6showComment, btn7hideCardCommentShowFinish, btnViewQuestionSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
-
+        // Reference to cards IDs
         card1 = findViewById(R.id.card_question_1);
         card2 = findViewById(R.id.card_question_2);
         card3 = findViewById(R.id.card_question_3);
         card4 = findViewById(R.id.card_question_4);
         card5 = findViewById(R.id.card_question_5);
         card6 = findViewById(R.id.card_question_6);
+        cardComment = findViewById(R.id.card_comment);
         cardFinish = findViewById(R.id.card_finish);
-
-        btn1 = findViewById(R.id.hideCard1show2);
-        btn2 = findViewById(R.id.hideCard2show3);
-        btn3 = findViewById(R.id.hideCard3show4);
-        btn4 = findViewById(R.id.hideCard4show5);
-        btn5 = findViewById(R.id.hideCard5show6);
-
+        // Reference to buttons IDs
+        btn1hideCard1show2 = findViewById(R.id.btn_hide_card_1_show_2);
+        btn2hideCard2show3 = findViewById(R.id.btn_hide_card_2_show_3);
+        btn3hideCard3show4 = findViewById(R.id.btn_hide_card_3_show_4);
+        btn4hideCard4show5 = findViewById(R.id.btn_hide_card_4_show_5);
+        btn5hideCard5show6 = findViewById(R.id.btn_hide_card_5_show_6);
+        btn6hideCard6showComment = findViewById(R.id.hide_card_6_show_comment);
+        btn7hideCardCommentShowFinish = findViewById(R.id.btn_hide_comment_show_finish);
         btnViewQuestionSummary = findViewById(R.id.btn_view_summary);
-        btnFinish = findViewById(R.id.btn_finish);
     }
 
-    public void viewSummary(View view){
+    // ######## HIDE AND SHOW CARDS METHODS #########
+
+    public void btn1hideCard1show2(View view){
+        card1.postDelayed(new Runnable() {
+            public void run() {
+                card1.setVisibility(View.GONE);
+            }
+        }, 500);
+        btn1hideCard1show2.setVisibility(View.GONE);
+
+        card2.postDelayed(new Runnable() {
+            public void run() {
+                card2.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+        btn2hideCard2show3.setVisibility(View.VISIBLE);
+    }
+
+    public void btn2hideCard2show3(View view){
+        card2.postDelayed(new Runnable() {
+            public void run() {
+                card2.setVisibility(View.GONE);
+            }
+        }, 500);
+        btn2hideCard2show3.setVisibility(View.GONE);
+
+        card3.postDelayed(new Runnable() {
+            public void run() {
+                card3.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+        btn3hideCard3show4.setVisibility(View.VISIBLE);
+    }
+
+    public void btn3hideCard3show4(View view){
+        card3.postDelayed(new Runnable() {
+            public void run() {
+                card3.setVisibility(View.GONE);
+            }
+        }, 500);
+        btn3hideCard3show4.setVisibility(View.GONE);
+
+        card4.postDelayed(new Runnable() {
+            public void run() {
+                card4.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+        btn4hideCard4show5.setVisibility(View.VISIBLE);
+    }
+
+    public void btn4hideCard4show5(View view){
+        card4.postDelayed(new Runnable() {
+            public void run() {
+                card4.setVisibility(View.GONE);
+            }
+        }, 500);
+        btn4hideCard4show5.setVisibility(View.GONE);
+
+        card5.postDelayed(new Runnable() {
+            public void run() {
+                card5.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+        btn5hideCard5show6.setVisibility(View.VISIBLE);
+    }
+
+    public void btn5hideCard5show6(View view){
+        card5.postDelayed(new Runnable() {
+            public void run() {
+                card5.setVisibility(View.GONE);
+            }
+        }, 500);
+        btn5hideCard5show6.setVisibility(View.GONE);
+
+        card6.postDelayed(new Runnable() {
+            public void run() {
+                card6.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+        btn6hideCard6showComment.setVisibility(View.VISIBLE);
+    }
+
+    public void btn6hideCard6showComment(View view){
+        card6.postDelayed(new Runnable() {
+            public void run() {
+                card6.setVisibility(View.GONE);
+            }
+        }, 500);
+        btn6hideCard6showComment.setVisibility(View.GONE);
+
+        cardComment.postDelayed(new Runnable() {
+            public void run() {
+                cardComment.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+        btn7hideCardCommentShowFinish.setVisibility(View.VISIBLE);
+    }
+
+    public void btn7hideCardCommentShowFinish(View view){
+        cardComment.setVisibility(View.GONE);
+        btn7hideCardCommentShowFinish.setVisibility(View.GONE);
+
+        cardFinish.setVisibility(View.VISIBLE);
+        btnViewQuestionSummary.setVisibility(View.VISIBLE);
+    }
+
+    public void ViewSummary(View view){
 
         // Grab user answer from question 1
         RadioGroup question1 = findViewById(R.id.radio_group_question_1);
@@ -61,13 +173,18 @@ public class QuestionsActivity extends AppCompatActivity {
 
         // Grab user answer from question 6
         RadioGroup question6 = findViewById(R.id.radio_group_question_6);
-        String userAnswer6 = ((RadioButton) findViewById(question6.getCheckedRadioButtonId())).getText().toString();
+        String userAnswer6 = ((RadioButton) findViewById(question6.getCheckedRadioButtonId())).getText().toString(); // Grab user answer from question
+
+        // Grab user answer from comment feedback input
+        EditText editTextComment = findViewById(R.id.comment);
+        String commentText = editTextComment.getText().toString();
+
 
         // Grab user form data from WelcomeActivity
         Bundle userData = getIntent().getExtras();
-        if (userData == null) {
-            return;
-        }
+            if (userData == null) {
+                return;
+            }
         String name = userData.getString("name");
         String email = userData.getString("email");
         int age = userData.getInt("age");
@@ -75,106 +192,39 @@ public class QuestionsActivity extends AppCompatActivity {
         boolean sendMeFuture = userData.getBoolean("sendMeFuture");
         String isAthleteActive = userData.getString("isAthleteActive");
 
+        // Creates a Intent Object put all answers and start SummaryActivity
         Intent intent = new Intent(this, SummaryActivity.class);
-            intent.putExtra("name", name);
-            intent.putExtra("email", email);
-            intent.putExtra("age", age);
-            intent.putExtra("sendMeACopy", sendMeACopy);
-            intent.putExtra("sendMeFuture", sendMeFuture);
-            intent.putExtra("isAthleteActive", isAthleteActive);
-            intent.putExtra("userAnswer1", userAnswer1);
-            intent.putExtra("userAnswer2", userAnswer2);
-            intent.putExtra("userAnswer3", userAnswer3);
-            intent.putExtra("userAnswer4", userAnswer4);
-            intent.putExtra("userAnswer5", userAnswer5);
-            intent.putExtra("userAnswer6", userAnswer6);
+        intent.putExtra("name", name);
+        intent.putExtra("email", email);
+        intent.putExtra("age", age);
+        intent.putExtra("sendMeACopy", sendMeACopy);
+        intent.putExtra("sendMeFuture", sendMeFuture);
+        intent.putExtra("isAthleteActive", isAthleteActive);
+        // Quiz answers:
+        intent.putExtra("userAnswer1", userAnswer1);
+        intent.putExtra("userAnswer2", userAnswer2);
+        intent.putExtra("userAnswer3", userAnswer3);
+        intent.putExtra("userAnswer4", userAnswer4);
+        intent.putExtra("userAnswer5", userAnswer5);
+        intent.putExtra("userAnswer6", userAnswer6);
+        intent.putExtra("commentText", commentText);
+
+        // Testing on Logcat
+        Log.v("QuestionsActivity", "name: " + name);
+        Log.v("QuestionsActivity", "email: " + email);
+        Log.v("QuestionsActivity", "age: " + age);
+        Log.v("QuestionsActivity", "sendMeACopy: " + sendMeACopy);
+        Log.v("QuestionsActivity", "sendMeFuture: " + sendMeFuture);
+        Log.v("QuestionsActivity", "isAthleteActive: " + isAthleteActive);
+
+        Log.v("QuestionsActivity", "userAnswer1: " + userAnswer1);
+        Log.v("QuestionsActivity", "userAnswer2: " + userAnswer2);
+        Log.v("QuestionsActivity", "userAnswer3: " + userAnswer3);
+        Log.v("QuestionsActivity", "userAnswer4: " + userAnswer4);
+        Log.v("QuestionsActivity", "userAnswer5: " + userAnswer5);
+        Log.v("QuestionsActivity", "userAnswer6: " + userAnswer6);
+        Log.v("QuestionsActivity", "commentText: " + commentText);
+
         startActivity(intent);
     }
-
-    // ######## HIDE AND SHOW CARDS METHODS #########
-
-    public void hideCard1show2(View view){
-        //card1.setVisibility(View.GONE);
-        card1.postDelayed(new Runnable() {
-            public void run() {
-                card1.setVisibility(View.GONE);
-            }
-        }, 500);
-        card2.postDelayed(new Runnable() {
-            public void run() {
-                card2.setVisibility(View.VISIBLE);
-            }
-        }, 500);
-        //card2.setVisibility(View.VISIBLE);
-        btn1.setVisibility(View.GONE);
-        btn2.setVisibility(View.VISIBLE);
-    }
-
-    public void hideCard2show3(View view){
-        card2.postDelayed(new Runnable() {
-            public void run() {
-                card2.setVisibility(View.GONE);
-            }
-        }, 500);
-        card3.postDelayed(new Runnable() {
-            public void run() {
-                card3.setVisibility(View.VISIBLE);
-            }
-        }, 500);
-        btn2.setVisibility(View.GONE);
-        btn3.setVisibility(View.VISIBLE);
-    }
-
-    public void hideCard3show4(View view){
-        card3.postDelayed(new Runnable() {
-            public void run() {
-                card3.setVisibility(View.GONE);
-            }
-        }, 500);
-        card4.postDelayed(new Runnable() {
-            public void run() {
-                card4.setVisibility(View.VISIBLE);
-            }
-        }, 500);
-        btn3.setVisibility(View.GONE);
-        btn4.setVisibility(View.VISIBLE);
-    }
-
-    public void hideCard4show5(View view){
-        card4.postDelayed(new Runnable() {
-            public void run() {
-                card4.setVisibility(View.GONE);
-            }
-        }, 500);
-        card5.postDelayed(new Runnable() {
-            public void run() {
-                card5.setVisibility(View.VISIBLE);
-            }
-        }, 500);
-        btn4.setVisibility(View.GONE);
-        btn5.setVisibility(View.VISIBLE);
-    }
-
-    public void hideCard5show6(View view){
-        card5.postDelayed(new Runnable() {
-            public void run() {
-                card5.setVisibility(View.GONE);
-            }
-        }, 500);
-        card6.postDelayed(new Runnable() {
-            public void run() {
-                card6.setVisibility(View.VISIBLE);
-            }
-        }, 500);
-        btn5.setVisibility(View.GONE);
-        btnFinish.setVisibility(View.VISIBLE);
-    }
-
-    public void finish(View view){
-        card6.setVisibility(View.GONE);
-        cardFinish.setVisibility(View.VISIBLE);
-        btnFinish.setVisibility(View.GONE);
-        btnViewQuestionSummary.setVisibility(View.VISIBLE);
-    }
-
 }

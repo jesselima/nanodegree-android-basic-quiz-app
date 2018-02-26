@@ -36,8 +36,8 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/type_you_name"
-                android:inputType="textCapCharacters"/>
+                android:hint="Type your name"
+                android:inputType="textCapWords"/>
             <TextView
                 style="@style/editTextForm"
                 android:text="@string/email" />

@@ -12,29 +12,32 @@ import android.widget.TextView;
 
 public class SummaryActivity extends AppCompatActivity {
 
-    String correctAnswer1 = getString(R.string.question_1_answer_2);
-    String correctAnswer2 = getString(R.string.question_2_answer_4);
-    String correctAnswer3 = getString(R.string.question_3_answer_1);
-    String correctAnswer4 = getString(R.string.question_4_answer_2);
-    String correctAnswer5 = getString(R.string.question_5_answer_3);
-    String correctAnswer6 = getString(R.string.question_6_answer_2);
+    String correctAnswer1 = "4 events";
+    String correctAnswer2 = "Javier Sotomayor";
+    String correctAnswer3 = "IAAF";
+    String correctAnswer4 = "Dick Fosbury";
+    String correctAnswer5 = "Carl Lewis";
+    String correctAnswer6 = "4 events";
 
     int pointsPerHit = 60;
     // TODO: numberOfHits and pointsEarned must be sent do email body. Trying to figure out. :D
     int numberOfHits = 99; // not used
     int pointsEarned = 99; // not used
 
-    String textHit = getString(R.string.hit);
-    String feelingNotSeen = getString(R.string.feeling_not_seen);
-    String feelingBad = getString(R.string.feeling_bad);
-    String feelingCool = getString(R.string.feeling_cool);
-    String feelingCrazy = getString(R.string.feeling_crazy);
-    String feelingAwesome = getString(R.string.feeling_awesome);
+    String textHit = "You got a Hit!";
+    String feelingNotSeen = "OK. Don't worry. I din't see this!";
+    String feelingBad = "Ops! You really need do research!";
+    String feelingCool = "Nice! You really know about athletics.";
+    String feelingCrazy = "Are you kidding me? You better try another quiz. This one is not for you.";
+    String feelingAwesome = "Perfect! You hit all questions. Congratulations!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
+
+        String test = "Test OK!";
+        Log.v("SummaryActivity", "Test: " + test);
 
         // Grab data from QuestionActivity by Intent
         Bundle userData = getIntent().getExtras();
@@ -51,6 +54,9 @@ public class SummaryActivity extends AppCompatActivity {
         String userAnswer4 = userData.getString("userAnswer4");
         String userAnswer5 = userData.getString("userAnswer5");
         String userAnswer6 = userData.getString("userAnswer6");
+        String commentText = userData.getString("commentText");
+        Log.v("SummaryActivity", "Comment: " + commentText);
+
         int numberOfHits = userData.getInt("numberOfHits");
         int pointsEarned = userData.getInt("pointsEarned");
 
@@ -239,15 +245,15 @@ public class SummaryActivity extends AppCompatActivity {
         int age = userData.getInt("age");
         boolean receiveCopy = userData.getBoolean("sendMeACopy");
             if(receiveCopy){
-                    sendMeACopy = "YES";
+                    sendMeACopy = getString(R.string.yes);
                 }else{
-                    sendMeACopy = "NO";
+                    sendMeACopy = getString(R.string.no);
             }
         boolean sendFuture = userData.getBoolean("sendMeFuture");
             if(sendFuture){
-                sendMeFuture = "YES";
+                sendMeFuture = getString(R.string.yes);
             }else{
-                sendMeFuture = "NO";
+                sendMeFuture = getString(R.string.no);
             }
         String isAthleteActive = userData.getString("isAthleteActive");
         String userAnswer1 = userData.getString("userAnswer1");
@@ -256,6 +262,7 @@ public class SummaryActivity extends AppCompatActivity {
         String userAnswer4 = userData.getString("userAnswer4");
         String userAnswer5 = userData.getString("userAnswer5");
         String userAnswer6 = userData.getString("userAnswer6");
+        String commentText = userData.getString("commentText");
 
         String userSummary = addDataToEmailSummary(name,
                                             email,
@@ -274,6 +281,7 @@ public class SummaryActivity extends AppCompatActivity {
                                             userAnswer4,
                                             userAnswer5,
                                             userAnswer6,
+                                            commentText,
                                             sendMeACopy,
                                             sendMeFuture,
                                             isAthleteActive);
@@ -309,6 +317,7 @@ public class SummaryActivity extends AppCompatActivity {
                                     String correctAnswer4,
                                     String correctAnswer5,
                                     String correctAnswer6,
+                                    String commentText,
                                     String sendMeACopy,
                                     String sendMeFuture,
                                     String isAthleteActive){
@@ -369,6 +378,9 @@ public class SummaryActivity extends AppCompatActivity {
 
         userSummaryData += "\n\n " + getString(R.string.am_i_active_athlete);
         userSummaryData += "\n " + isAthleteActive;
+
+        userSummaryData += "\n\n " + getString(R.string.your_feedback);
+        userSummaryData += "\n " + commentText;
 
         return userSummaryData;
     }

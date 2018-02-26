@@ -84,5 +84,9 @@
     <string name="you_missed_this_one">You missed this one!</string>
     <string name="answers_summary">Answers Summary</string>
     <string name="you_hit">You hit:</string>
+    <string name="feedback_form">What do you think about this quiz? Please, add some feedback. We would like to hear from you.</string>
+    <string name="type_your_suggestions_here">Type your suggestions here</string>
+    <string name="your_feedback">Your suggestions:</string>
+    <string name="type_your_age">Type you age</string>
 
 </resources>
