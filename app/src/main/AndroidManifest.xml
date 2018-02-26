@@ -20,7 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuestionsActivity" />
+        <activity
+            android:name=".QuestionsActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+        </activity>
         <activity android:name=".SummaryActivity" />
         <activity android:name=".WelcomeActivity" />
     </application>

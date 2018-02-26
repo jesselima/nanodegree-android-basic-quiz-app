@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -19,10 +20,16 @@ public class QuestionsActivity extends AppCompatActivity {
     View card1,card2, card3, card4, card5, card6, cardComment, cardFinish;
     Button btn1hideCard1show2, btn2hideCard2show3, btn3hideCard3show4, btn4hideCard4show5, btn5hideCard5show6, btn6hideCard6showComment, btn7hideCardCommentShowFinish, btnViewQuestionSummary;
 
+    private ProgressBar progressBar;
+    private int progressStatus = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
+
+        progressBar = findViewById(R.id.progressBar);
+
         // Reference to cards IDs
         card1 = findViewById(R.id.card_question_1);
         card2 = findViewById(R.id.card_question_2);
@@ -59,6 +66,9 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 500);
         btn2hideCard2show3.setVisibility(View.VISIBLE);
+
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
     }
 
     public void btn2hideCard2show3(View view){
@@ -75,6 +85,9 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 500);
         btn3hideCard3show4.setVisibility(View.VISIBLE);
+
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
     }
 
     public void btn3hideCard3show4(View view){
@@ -91,6 +104,9 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 500);
         btn4hideCard4show5.setVisibility(View.VISIBLE);
+
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
     }
 
     public void btn4hideCard4show5(View view){
@@ -107,6 +123,9 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 500);
         btn5hideCard5show6.setVisibility(View.VISIBLE);
+
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
     }
 
     public void btn5hideCard5show6(View view){
@@ -123,6 +142,9 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 500);
         btn6hideCard6showComment.setVisibility(View.VISIBLE);
+
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
     }
 
     public void btn6hideCard6showComment(View view){
@@ -139,6 +161,8 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 500);
         btn7hideCardCommentShowFinish.setVisibility(View.VISIBLE);
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
     }
 
     public void btn7hideCardCommentShowFinish(View view){
@@ -147,6 +171,8 @@ public class QuestionsActivity extends AppCompatActivity {
 
         cardFinish.setVisibility(View.VISIBLE);
         btnViewQuestionSummary.setVisibility(View.VISIBLE);
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
     }
 
     public void ViewSummary(View view){
