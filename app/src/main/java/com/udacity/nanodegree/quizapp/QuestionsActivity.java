@@ -57,15 +57,24 @@ public class QuestionsActivity extends AppCompatActivity {
             public void run() {
                 card1.setVisibility(View.GONE);
             }
-        }, 500);
-        btn1hideCard1show2.setVisibility(View.GONE);
+        }, 300);
+        btn1hideCard1show2.postDelayed(new Runnable() {
+            public void run() {
+                btn1hideCard1show2.setVisibility(View.GONE);
+            }
+        }, 300);
+
 
         card2.postDelayed(new Runnable() {
             public void run() {
                 card2.setVisibility(View.VISIBLE);
             }
         }, 500);
-        btn2hideCard2show3.setVisibility(View.VISIBLE);
+        btn2hideCard2show3.postDelayed(new Runnable() {
+            public void run() {
+                btn2hideCard2show3.setVisibility(View.VISIBLE);
+            }
+        }, 800);
 
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
@@ -76,15 +85,23 @@ public class QuestionsActivity extends AppCompatActivity {
             public void run() {
                 card2.setVisibility(View.GONE);
             }
-        }, 500);
-        btn2hideCard2show3.setVisibility(View.GONE);
+        }, 300);
+        btn2hideCard2show3.postDelayed(new Runnable() {
+            public void run() {
+                btn2hideCard2show3.setVisibility(View.GONE);
+            }
+        }, 300);
 
         card3.postDelayed(new Runnable() {
             public void run() {
                 card3.setVisibility(View.VISIBLE);
             }
         }, 500);
-        btn3hideCard3show4.setVisibility(View.VISIBLE);
+        btn3hideCard3show4.postDelayed(new Runnable() {
+            public void run() {
+                btn3hideCard3show4.setVisibility(View.VISIBLE);
+            }
+        }, 800);
 
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
@@ -95,15 +112,23 @@ public class QuestionsActivity extends AppCompatActivity {
             public void run() {
                 card3.setVisibility(View.GONE);
             }
-        }, 500);
-        btn3hideCard3show4.setVisibility(View.GONE);
+        }, 300);
+        btn3hideCard3show4.postDelayed(new Runnable() {
+            public void run() {
+                btn3hideCard3show4.setVisibility(View.GONE);
+            }
+        }, 300);
 
         card4.postDelayed(new Runnable() {
             public void run() {
                 card4.setVisibility(View.VISIBLE);
             }
         }, 500);
-        btn4hideCard4show5.setVisibility(View.VISIBLE);
+        btn4hideCard4show5.postDelayed(new Runnable() {
+            public void run() {
+                btn4hideCard4show5.setVisibility(View.VISIBLE);
+            }
+        }, 800);
 
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
@@ -115,14 +140,21 @@ public class QuestionsActivity extends AppCompatActivity {
                 card4.setVisibility(View.GONE);
             }
         }, 500);
-        btn4hideCard4show5.setVisibility(View.GONE);
-
+        btn4hideCard4show5.postDelayed(new Runnable() {
+            public void run() {
+                btn4hideCard4show5.setVisibility(View.GONE);
+            }
+        }, 300);
         card5.postDelayed(new Runnable() {
             public void run() {
                 card5.setVisibility(View.VISIBLE);
             }
         }, 500);
-        btn5hideCard5show6.setVisibility(View.VISIBLE);
+        btn5hideCard5show6.postDelayed(new Runnable() {
+            public void run() {
+                btn5hideCard5show6.setVisibility(View.VISIBLE);
+            }
+        }, 800);
 
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
@@ -133,15 +165,23 @@ public class QuestionsActivity extends AppCompatActivity {
             public void run() {
                 card5.setVisibility(View.GONE);
             }
-        }, 500);
-        btn5hideCard5show6.setVisibility(View.GONE);
+        }, 300);
+        btn5hideCard5show6.postDelayed(new Runnable() {
+            public void run() {
+                btn5hideCard5show6.setVisibility(View.GONE);
+            }
+        }, 300);
 
         card6.postDelayed(new Runnable() {
             public void run() {
                 card6.setVisibility(View.VISIBLE);
             }
         }, 500);
-        btn6hideCard6showComment.setVisibility(View.VISIBLE);
+        btn6hideCard6showComment.postDelayed(new Runnable() {
+            public void run() {
+                btn6hideCard6showComment.setVisibility(View.VISIBLE);
+            }
+        }, 800);
 
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
@@ -152,25 +192,55 @@ public class QuestionsActivity extends AppCompatActivity {
             public void run() {
                 card6.setVisibility(View.GONE);
             }
-        }, 500);
-        btn6hideCard6showComment.setVisibility(View.GONE);
+        }, 300);
+        btn6hideCard6showComment.postDelayed(new Runnable() {
+            public void run() {
+                btn6hideCard6showComment.setVisibility(View.GONE);
+            }
+        }, 300);
 
         cardComment.postDelayed(new Runnable() {
             public void run() {
                 cardComment.setVisibility(View.VISIBLE);
             }
         }, 500);
-        btn7hideCardCommentShowFinish.setVisibility(View.VISIBLE);
+
+        btn7hideCardCommentShowFinish.postDelayed(new Runnable() {
+            public void run() {
+                btn7hideCardCommentShowFinish.setVisibility(View.VISIBLE);
+            }
+        }, 800);
+
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
     }
 
     public void btn7hideCardCommentShowFinish(View view){
-        cardComment.setVisibility(View.GONE);
-        btn7hideCardCommentShowFinish.setVisibility(View.GONE);
+        cardComment.postDelayed(new Runnable() {
+            public void run() {
+                cardComment.setVisibility(View.GONE);
+            }
+        }, 300);
 
-        cardFinish.setVisibility(View.VISIBLE);
-        btnViewQuestionSummary.setVisibility(View.VISIBLE);
+        btn7hideCardCommentShowFinish.postDelayed(new Runnable() {
+            public void run() {
+                btn7hideCardCommentShowFinish.setVisibility(View.GONE);
+            }
+        }, 300);
+
+        cardFinish.postDelayed(new Runnable() {
+            public void run() {
+                cardFinish.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+
+        btnViewQuestionSummary.postDelayed(new Runnable() {
+            public void run() {
+                btnViewQuestionSummary.setVisibility(View.VISIBLE);
+            }
+        }, 800);
+
+
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
     }
