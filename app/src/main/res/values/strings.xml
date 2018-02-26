@@ -76,13 +76,13 @@
     <string name="feeling_cool">Nice! You really know about athletics.</string>
     <string name="feeling_crazy">Are you kidding me? You better try another quiz. This one is not for you.</string>
     <string name="feeling_awesome">Perfect! You hit all questions. Congratulations!</string>
-    <string name="of_6_questions">of 6 questions</string>
+    <string name="of_6_questions">of 7 questions</string>
     <string name="user_answer_here">User answer here...</string>
     <string name="correct_answer_here">Correct answer here...</string>
     <string name="you_missed_this_one">You\'ve missed this one!</string>
     <string name="answers_summary">Answers Summary</string>
     <string name="you_hit">You hit:</string>
-    <string name="feedback_form">What do you think about this quiz? Please, add some feedback. We would like to hear from you.</string>
+    <string name="feedback_form">Did You like this quiz? Please, give us some feedback.</string>
     <string name="type_your_suggestions_here">Type your suggestions here</string>
     <string name="your_feedback">Your suggestions:</string>
 

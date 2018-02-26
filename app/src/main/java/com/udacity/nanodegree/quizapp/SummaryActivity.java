@@ -36,9 +36,6 @@ public class SummaryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
 
-        String test = "Test OK!";
-        Log.v("SummaryActivity", "Test: " + test);
-
         // Grab data from QuestionActivity by Intent
         Bundle userData = getIntent().getExtras();
 
@@ -76,6 +73,23 @@ public class SummaryActivity extends AppCompatActivity {
                             userAnswer6);
     }
 
+    /**
+     *
+     * @param numberOfHits is the number of right answers that user hit
+     * @param pointsEarned is the number of hits multiplied by the number of points per hit 60
+     * @param correctAnswer1
+     * @param correctAnswer2
+     * @param correctAnswer3
+     * @param correctAnswer4
+     * @param correctAnswer5
+     * @param correctAnswer6
+     * @param userAnswer1
+     * @param userAnswer2
+     * @param userAnswer3
+     * @param userAnswer4
+     * @param userAnswer5
+     * @param userAnswer6
+     */
     public void calculateAnswers(int numberOfHits,
                                     int pointsEarned,
                                     String correctAnswer1,
@@ -188,9 +202,6 @@ public class SummaryActivity extends AppCompatActivity {
             img6.setImageResource(R.drawable.question_hit);
         }
 
-        // Testing number of hits and points earned.
-        Log.v("SummaryActivity", "numberOfHits: " + numberOfHits);// ok!
-        Log.v("SummaryActivity", "numberOfHits: " + pointsEarned); // ok!
 
         TextView pointsTextView = findViewById(R.id.points_earned);
         pointsTextView.setText(String.valueOf(pointsEarned));
@@ -198,6 +209,7 @@ public class SummaryActivity extends AppCompatActivity {
         TextView hitsTextView = findViewById(R.id.number_of_hit_questions);
         hitsTextView.setText(String.valueOf(numberOfHits));
 
+        // Update the summary header with text and image according to amount of questions hit
         if(numberOfHits < 1) {
             ImageView imgFeeling = findViewById(R.id.img_feeling);
             imgFeeling.setImageResource(R.drawable.feeling_not_seen);
@@ -234,6 +246,10 @@ public class SummaryActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     */
     public void sendQuizByEmail(View view){
 
         String sendMeACopy;
@@ -300,6 +316,31 @@ public class SummaryActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param name
+     * @param email
+     * @param age
+     * @param hits
+     * @param pointsEarned
+     * @param userAnswer1
+     * @param userAnswer2
+     * @param userAnswer3
+     * @param userAnswer4
+     * @param userAnswer5
+     * @param userAnswer6
+     * @param correctAnswer1
+     * @param correctAnswer2
+     * @param correctAnswer3
+     * @param correctAnswer4
+     * @param correctAnswer5
+     * @param correctAnswer6
+     * @param commentText
+     * @param sendMeACopy
+     * @param sendMeFuture
+     * @param isAthleteActive
+     * @return
+     */
     private String addDataToEmailSummary(String name,
                                     String email,
                                     int age,

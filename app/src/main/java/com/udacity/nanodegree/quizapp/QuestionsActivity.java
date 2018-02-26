@@ -1,8 +1,5 @@
 package com.udacity.nanodegree.quizapp;
 
-// TODO: Fix activity refresh when orientation changes to landscape
-// TODO: UPDATE VALUE OF PROGRESS BAR WHEN CLICK NEXT BUTTON
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +16,6 @@ public class QuestionsActivity extends AppCompatActivity {
 
     View card1,card2, card3, card4, card5, card6, cardComment, cardFinish;
     Button btn1hideCard1show2, btn2hideCard2show3, btn3hideCard3show4, btn4hideCard4show5, btn5hideCard5show6, btn6hideCard6showComment, btn7hideCardCommentShowFinish, btnViewQuestionSummary;
-
     private ProgressBar progressBar;
     private int progressStatus = 0;
 
@@ -63,7 +59,6 @@ public class QuestionsActivity extends AppCompatActivity {
                 btn1hideCard1show2.setVisibility(View.GONE);
             }
         }, 300);
-
 
         card2.postDelayed(new Runnable() {
             public void run() {
@@ -145,6 +140,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 btn4hideCard4show5.setVisibility(View.GONE);
             }
         }, 300);
+
         card5.postDelayed(new Runnable() {
             public void run() {
                 card5.setVisibility(View.VISIBLE);
@@ -240,7 +236,6 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 800);
 
-
         progressStatus += 10;
         progressBar.setProgress(progressStatus);
     }
@@ -275,7 +270,6 @@ public class QuestionsActivity extends AppCompatActivity {
         EditText editTextComment = findViewById(R.id.comment);
         String commentText = editTextComment.getText().toString();
 
-
         // Grab user form data from WelcomeActivity
         Bundle userData = getIntent().getExtras();
             if (userData == null) {
@@ -290,37 +284,20 @@ public class QuestionsActivity extends AppCompatActivity {
 
         // Creates a Intent Object put all answers and start SummaryActivity
         Intent intent = new Intent(this, SummaryActivity.class);
-        intent.putExtra("name", name);
-        intent.putExtra("email", email);
-        intent.putExtra("age", age);
-        intent.putExtra("sendMeACopy", sendMeACopy);
-        intent.putExtra("sendMeFuture", sendMeFuture);
-        intent.putExtra("isAthleteActive", isAthleteActive);
-        // Quiz answers:
-        intent.putExtra("userAnswer1", userAnswer1);
-        intent.putExtra("userAnswer2", userAnswer2);
-        intent.putExtra("userAnswer3", userAnswer3);
-        intent.putExtra("userAnswer4", userAnswer4);
-        intent.putExtra("userAnswer5", userAnswer5);
-        intent.putExtra("userAnswer6", userAnswer6);
-        intent.putExtra("commentText", commentText);
-
-        // Testing on Logcat
-        Log.v("QuestionsActivity", "name: " + name);
-        Log.v("QuestionsActivity", "email: " + email);
-        Log.v("QuestionsActivity", "age: " + age);
-        Log.v("QuestionsActivity", "sendMeACopy: " + sendMeACopy);
-        Log.v("QuestionsActivity", "sendMeFuture: " + sendMeFuture);
-        Log.v("QuestionsActivity", "isAthleteActive: " + isAthleteActive);
-
-        Log.v("QuestionsActivity", "userAnswer1: " + userAnswer1);
-        Log.v("QuestionsActivity", "userAnswer2: " + userAnswer2);
-        Log.v("QuestionsActivity", "userAnswer3: " + userAnswer3);
-        Log.v("QuestionsActivity", "userAnswer4: " + userAnswer4);
-        Log.v("QuestionsActivity", "userAnswer5: " + userAnswer5);
-        Log.v("QuestionsActivity", "userAnswer6: " + userAnswer6);
-        Log.v("QuestionsActivity", "commentText: " + commentText);
-
+            intent.putExtra("name", name);
+            intent.putExtra("email", email);
+            intent.putExtra("age", age);
+            intent.putExtra("sendMeACopy", sendMeACopy);
+            intent.putExtra("sendMeFuture", sendMeFuture);
+            intent.putExtra("isAthleteActive", isAthleteActive);
+            // Quiz answers:
+            intent.putExtra("userAnswer1", userAnswer1);
+            intent.putExtra("userAnswer2", userAnswer2);
+            intent.putExtra("userAnswer3", userAnswer3);
+            intent.putExtra("userAnswer4", userAnswer4);
+            intent.putExtra("userAnswer5", userAnswer5);
+            intent.putExtra("userAnswer6", userAnswer6);
+            intent.putExtra("commentText", commentText);
         startActivity(intent);
     }
 }

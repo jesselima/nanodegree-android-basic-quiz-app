@@ -3,7 +3,6 @@ package com.udacity.nanodegree.quizapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -47,7 +46,6 @@ public class WelcomeActivity extends AppCompatActivity {
 
         // Grab user answer from question 3
         RadioGroup radioGroupAthleteActive = findViewById(R.id.radio_group_active_athlete);
-
         String isAthleteActive = "";
             if (radioGroupAthleteActive.getCheckedRadioButtonId() == -1){
                 Toast.makeText(this, "Select if you are athlete or not.", Toast.LENGTH_SHORT).show();
@@ -62,13 +60,11 @@ public class WelcomeActivity extends AppCompatActivity {
                 Toast.makeText(this, "Age can not be empty.", Toast.LENGTH_SHORT).show();
                 return;
             }
-        int age = Integer.parseInt(myAge);
+            int age = Integer.parseInt(myAge);
             if (age < 5 ) {
                 Toast.makeText(this, "Your age must be greater than 5.", Toast.LENGTH_SHORT).show();
                 return;
             }
-
-
 
 
         Intent intent = new Intent(this, QuestionsActivity.class);
@@ -78,14 +74,6 @@ public class WelcomeActivity extends AppCompatActivity {
             intent.putExtra("sendMeACopy", sendMeACopy);
             intent.putExtra("sendMeFuture", sendMeFuture);
             intent.putExtra("isAthleteActive", isAthleteActive);
-
-        // Testing
-        Log.v("WelcomeActivity", "Name: " + name);
-        Log.v("WelcomeActivity", "Email: " + email);
-        Log.v("WelcomeActivity", "Age: " + age);
-        Log.v("WelcomeActivity", "sendMeACopy: " + sendMeACopy);
-        Log.v("WelcomeActivity", "sendMeFuture: " + sendMeFuture);
-        Log.v("WelcomeActivity", "isAthleteActive: " + isAthleteActive);
 
         startActivity(intent);
     }

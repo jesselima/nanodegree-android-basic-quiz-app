@@ -31,21 +31,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="16sp"
+        android:textSize="24sp"
         android:layout_margin="8dp"
         android:text="Nanodegree Android Basic"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:layout_margin="8dp"
         android:text="Project 03"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:layout_marginTop="16dp"
         android:textStyle="italic"
         android:text="by Jesse Lima"/>
