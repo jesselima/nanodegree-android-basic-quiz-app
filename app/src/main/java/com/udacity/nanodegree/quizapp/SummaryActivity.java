@@ -5,24 +5,22 @@ import android.net.Uri;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SummaryActivity extends AppCompatActivity {
 
-    String correctAnswer1 = "4 events";
+    String correctAnswer1 = "4";
     String correctAnswer2 = "Javier Sotomayor";
     String correctAnswer3 = "IAAF";
     String correctAnswer4 = "Dick Fosbury";
     String correctAnswer5 = "Carl Lewis";
-    String correctAnswer6 = "4 events";
+    String correctAnswer6 = "4";
 
-    int pointsPerHit = 60;
-    // TODO: numberOfHits and pointsEarned must be sent do email body. Trying to figure out. :D
-    int numberOfHits = 99; // not used
-    int pointsEarned = 99; // not used
+    final int pointsPerHit = 60;
+    int numberOfHits = 0;
+    int pointsEarned = 0;
 
     String textHit = "You got a Hit!";
     String feelingNotSeen = "OK. Don't worry. I din't see this!";
@@ -38,7 +36,6 @@ public class SummaryActivity extends AppCompatActivity {
 
         // Grab data from QuestionActivity by Intent
         Bundle userData = getIntent().getExtras();
-
         String name = userData.getString("name");
         String email = userData.getString("email");
         int age = userData.getInt("age");
@@ -52,12 +49,8 @@ public class SummaryActivity extends AppCompatActivity {
         String userAnswer5 = userData.getString("userAnswer5");
         String userAnswer6 = userData.getString("userAnswer6");
         String commentText = userData.getString("commentText");
-        Log.v("SummaryActivity", "Comment: " + commentText);
 
-        int numberOfHits = userData.getInt("numberOfHits");
-        int pointsEarned = userData.getInt("pointsEarned");
-
-        calculateAnswers(numberOfHits,
+        generateSummary(numberOfHits,
                             pointsEarned,
                             correctAnswer1,
                             correctAnswer2,
@@ -74,23 +67,24 @@ public class SummaryActivity extends AppCompatActivity {
     }
 
     /**
+     * The method gets all user answer and compare with the correct ones. If they match add 1 to number of hits and multiply by points per hit (60) giving the pointsEarned as a result.
      *
      * @param numberOfHits is the number of right answers that user hit
      * @param pointsEarned is the number of hits multiplied by the number of points per hit 60
-     * @param correctAnswer1
-     * @param correctAnswer2
-     * @param correctAnswer3
-     * @param correctAnswer4
-     * @param correctAnswer5
-     * @param correctAnswer6
-     * @param userAnswer1
-     * @param userAnswer2
-     * @param userAnswer3
-     * @param userAnswer4
-     * @param userAnswer5
-     * @param userAnswer6
+     * @param correctAnswer1 is the correct answer to be compared with the user answer of the question 1
+     * @param correctAnswer2 is the correct answer to be compared with the user answer of the question 2
+     * @param correctAnswer3 is the correct answer to be compared with the user answer of the question 3
+     * @param correctAnswer4 is the correct answer to be compared with the user answer of the question 4
+     * @param correctAnswer5 is the correct answer to be compared with the user answer of the question 5
+     * @param correctAnswer6 is the correct answer to be compared with the user answer of the question 6
+     * @param userAnswer1 is the user answer select in question 1
+     * @param userAnswer2 is the user answer select in question 2
+     * @param userAnswer3 is the user answer select in question 3
+     * @param userAnswer4 is the user answer select in question 4
+     * @param userAnswer5 is the user answer select in question 5
+     * @param userAnswer6 is the user answer select in question 6
      */
-    public void calculateAnswers(int numberOfHits,
+    public void generateSummary(int numberOfHits,
                                     int pointsEarned,
                                     String correctAnswer1,
                                     String correctAnswer2,
@@ -105,36 +99,38 @@ public class SummaryActivity extends AppCompatActivity {
                                     String userAnswer5,
                                     String userAnswer6){
 
+        // Send user answer and correct answer to question 1 card at the summary
         TextView userAnswerTextView1 = findViewById(R.id.user_answer_1);
         userAnswerTextView1.setText(userAnswer1);
         TextView correctAnswerTextView1 = findViewById(R.id.correct_answer_1);
         correctAnswerTextView1.setText(correctAnswer1);
-
+        // Send user answer and correct answer to question 2 card at the summary
         TextView userAnswerTextView2 = findViewById(R.id.user_answer_2);
         userAnswerTextView2.setText(userAnswer2);
         TextView correctAnswerTextView2 = findViewById(R.id.correct_answer_2);
         correctAnswerTextView2.setText(correctAnswer2);
-
+        // Send user answer and correct answer to question 3 card at the summary
         TextView userAnswerTextView3 = findViewById(R.id.user_answer_3);
         userAnswerTextView3.setText(userAnswer3);
         TextView correctAnswerTextView3 = findViewById(R.id.correct_answer_3);
         correctAnswerTextView3.setText(correctAnswer3);
-
+        // Send user answer and correct answer to question 4 card at the summary
         TextView userAnswerTextView4 = findViewById(R.id.user_answer_4);
         userAnswerTextView4.setText(userAnswer4);
         TextView correctAnswerTextView4 = findViewById(R.id.correct_answer_4);
         correctAnswerTextView4.setText(correctAnswer4);
-
+        // Send user answer and correct answer to question 5 card at the summary
         TextView userAnswerTextView5 = findViewById(R.id.user_answer_5);
         userAnswerTextView5.setText(userAnswer5);
         TextView correctAnswerTextView5 = findViewById(R.id.correct_answer_5);
         correctAnswerTextView5.setText(correctAnswer5);
-
+        // Send user answer and correct answer to question 6 card at the summary
         TextView userAnswerTextView6 = findViewById(R.id.user_answer_6);
         userAnswerTextView6.setText(userAnswer6);
         TextView correctAnswerTextView6 = findViewById(R.id.correct_answer_6);
         correctAnswerTextView6.setText(correctAnswer6);
 
+        // Check if use answers are correct or not, updates the number of hits and points earned
         if(userAnswer1.equals(correctAnswer1)){
             numberOfHits++;
             pointsEarned = numberOfHits * pointsPerHit;
@@ -202,10 +198,10 @@ public class SummaryActivity extends AppCompatActivity {
             img6.setImageResource(R.drawable.question_hit);
         }
 
-
+        // update the points earned on the summary
         TextView pointsTextView = findViewById(R.id.points_earned);
         pointsTextView.setText(String.valueOf(pointsEarned));
-
+        // update the number of hits  on the summary
         TextView hitsTextView = findViewById(R.id.number_of_hit_questions);
         hitsTextView.setText(String.valueOf(numberOfHits));
 
@@ -246,10 +242,6 @@ public class SummaryActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     *
-     * @param view
-     */
     public void sendQuizByEmail(View view){
 
         String sendMeACopy;
@@ -279,6 +271,12 @@ public class SummaryActivity extends AppCompatActivity {
         String userAnswer5 = userData.getString("userAnswer5");
         String userAnswer6 = userData.getString("userAnswer6");
         String commentText = userData.getString("commentText");
+
+        TextView pointsTextView = findViewById(R.id.points_earned);
+        int pointsEarned = Integer.parseInt(pointsTextView.getText().toString());
+
+        TextView numberOfHitsTextView = findViewById(R.id.number_of_hit_questions);
+        int numberOfHits = Integer.parseInt(numberOfHitsTextView.getText().toString());
 
         String userSummary = addDataToEmailSummary(name,
                                             email,
@@ -321,7 +319,7 @@ public class SummaryActivity extends AppCompatActivity {
      * @param name
      * @param email
      * @param age
-     * @param hits
+     * @param numberOfHits
      * @param pointsEarned
      * @param userAnswer1
      * @param userAnswer2
@@ -344,7 +342,7 @@ public class SummaryActivity extends AppCompatActivity {
     private String addDataToEmailSummary(String name,
                                     String email,
                                     int age,
-                                    int hits,
+                                    int numberOfHits,
                                     int pointsEarned,
                                     String userAnswer1,
                                     String userAnswer2,
@@ -363,6 +361,7 @@ public class SummaryActivity extends AppCompatActivity {
                                     String sendMeFuture,
                                     String isAthleteActive){
 
+
         String userSummaryData = getString(R.string.my_quiz_athletics_result);
 
         // User data
@@ -371,7 +370,7 @@ public class SummaryActivity extends AppCompatActivity {
         userSummaryData += "\n " + getString(R.string.age) + age;
 
         // Points
-        userSummaryData += "\n\n " + getString(R.string.number_of_hits) + hits;
+        userSummaryData += "\n\n " + getString(R.string.number_of_hits) + numberOfHits;
         userSummaryData += "\n " + getString(R.string.points_earned) + pointsEarned;
 
         // Questions and answers

@@ -66,7 +66,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 return;
             }
 
-
+        // Grab form data and send to QuestionsActivity using a intent object
         Intent intent = new Intent(this, QuestionsActivity.class);
             intent.putExtra("name", name);
             intent.putExtra("email", email);
@@ -74,7 +74,6 @@ public class WelcomeActivity extends AppCompatActivity {
             intent.putExtra("sendMeACopy", sendMeACopy);
             intent.putExtra("sendMeFuture", sendMeFuture);
             intent.putExtra("isAthleteActive", isAthleteActive);
-
         startActivity(intent);
     }
 

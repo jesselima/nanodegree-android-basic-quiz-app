@@ -263,7 +263,7 @@
                     style="@style/cardLinearLayoutVertical">
                     <TextView
                         style="@style/cardFimBaseLayout"
-                        android:text="You finish the quiz"/>
+                        android:text="@string/you_finish_the_quiz"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -271,14 +271,14 @@
                 style="@style/buttonDefault"
                 android:onClick="btn1hideCard1show2"
                 android:id="@+id/btn_hide_card_1_show_2"
-                android:text="Next Question 2/7"
+                android:text="@string/next_question_2_7"
                 android:visibility="visible"/>
 
             <Button
                 style="@style/buttonDefault"
                 android:onClick="btn2hideCard2show3"
                 android:id="@+id/btn_hide_card_2_show_3"
-                android:text="Next Question 3/7"
+                android:text="@string/next_question_3_7"
                 android:visibility="gone"/>
 
             <Button
@@ -292,28 +292,28 @@
                 style="@style/buttonDefault"
                 android:onClick="btn4hideCard4show5"
                 android:id="@+id/btn_hide_card_4_show_5"
-                android:text="Next Question 5/7"
+                android:text="@string/next_question_5_7"
                 android:visibility="gone"/>
 
             <Button
                 style="@style/buttonDefault"
                 android:onClick="btn5hideCard5show6"
                 android:id="@+id/btn_hide_card_5_show_6"
-                android:text="Next Question 6/7"
+                android:text="@string/next_question_6_7"
                 android:visibility="gone"/>
 
             <Button
                 style="@style/buttonDefault"
                 android:onClick="btn6hideCard6showComment"
                 android:id="@+id/hide_card_6_show_comment"
-                android:text="Next Question 7/7"
+                android:text="@string/next_question_7_7"
                 android:visibility="gone"/>
 
             <Button
                 style="@style/buttonDefault"
                 android:onClick="btn7hideCardCommentShowFinish"
                 android:id="@+id/btn_hide_comment_show_finish"
-                android:text="FINISH"
+                android:text="@string/finish"
                 android:visibility="gone"/>
 
             <Button
@@ -321,7 +321,7 @@
                 android:onClick="ViewSummary"
                 android:id="@+id/btn_view_summary"
                 android:visibility="gone"
-                android:text="See Answers Summary"/>
+                android:text="@string/answers_summary"/>
 
         </LinearLayout>
     </ScrollView>

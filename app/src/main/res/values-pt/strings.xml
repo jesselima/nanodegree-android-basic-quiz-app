@@ -5,15 +5,13 @@
     <string name="quiz_summary_email_subject">Resultado do Quiz atletismo de\u0020</string>
     <string name="welcome_message1">Bem-vindo! Obrigado por participar do quiz sobre atletismo! Vamos ver o quanto você sabe sobre a história do atletismo.</string>
     <string name="welcome_message2">Primeiro! Deixe-me conhecê-lo um pouco mais preenchendo este simples formulário.</string>
-
     <string name="question_1_header">Pergunta 1</string>
     <string name="question_1_body">Quantas provas de salto existem no atletismo? Não considere os sexos.</string>
-    <string name="question_1_answer_1">2 eventos</string>
-    <string name="question_1_answer_2">4 eventos</string>
-    <string name="question_1_answer_3">6 eventos</string>
-    <string name="question_1_answer_4">8 eventos</string>
-    <string name="question_1_answer_5">10 eventos</string>
-
+    <string name="question_1_answer_1">2</string>
+    <string name="question_1_answer_2">4</string>
+    <string name="question_1_answer_3">6</string>
+    <string name="question_1_answer_4">8</string>
+    <string name="question_1_answer_5">10</string>
     <string name="question_2_header">Pergunta 2</string>
     <string name="question_2_body">Quem é o recordista mundial do salto em altura?</string>
     <string name="question_2_answer_1">Mutaz Essa BARSHIM</string>
@@ -21,7 +19,6 @@
     <string name="question_2_answer_3">Bohdan BONDARENKO</string>
     <string name="question_2_answer_4">Javier Sotomayor</string>
     <string name="question_2_answer_5">Igor PAKLIN</string>
-
     <string name="question_3_header">Pergunta 3</string>
     <string name="question_3_body">Qual é a sigla da principal organização internacional de atletismo?</string>
     <string name="question_3_answer_1">IAAF</string>
@@ -29,7 +26,6 @@
     <string name="question_3_answer_3">COB</string>
     <string name="question_3_answer_4">FINA</string>
     <string name="question_3_answer_5">FIBA</string>
-
     <string name="question_4_header">Pergunta 4</string>
     <string name="question_4_body">Quem foi o atleta que criou a técnica flop do Salto em Altura?</string>
     <string name="question_4_answer_1">Mike Powell</string>
@@ -37,7 +33,6 @@
     <string name="question_4_answer_3">Michel Jhonson</string>
     <string name="question_4_answer_4">Platt Adams</string>
     <string name="question_4_answer_5">Mutaz Essa Barshim</string>
-
     <string name="question_5_header">Pergunta 5</string>
     <string name="question_5_body">Qual atleta ganhou 9 medalhas de ouro em Jogos Olímpicos?</string>
     <string name="question_5_answer_1">Michel Jhonson</string>
@@ -45,15 +40,13 @@
     <string name="question_5_answer_3">Carl Lewis</string>
     <string name="question_5_answer_4">Platt Adams</string>
     <string name="question_5_answer_5">Al Oerter</string>
-
     <string name="question_6_header">Pergunta 6</string>
     <string name="question_6_body">Quantas provas de lançamento e arremesso existem no atletismo? Não considere o sexo.</string>
-    <string name="question_6_answer_1">2 eventos</string>
-    <string name="question_6_answer_2">4 eventos</string>
-    <string name="question_6_answer_3">8 eventos</string>
-    <string name="question_6_answer_4">5 eventos</string>
-    <string name="question_6_answer_5">9 eventos</string>
-
+    <string name="question_6_answer_1">2</string>
+    <string name="question_6_answer_2">4</string>
+    <string name="question_6_answer_3">8</string>
+    <string name="question_6_answer_4">5</string>
+    <string name="question_6_answer_5">9</string>
     <string name="send_by_email">Enviar por e-mail</string>
     <string name="type_you_name">Digite seu nome</string>
     <string name="type_your_email">Digite seu e-mail</string>
@@ -61,7 +54,7 @@
     <string name="send_me_more_quiz">Me envie mais quiz no futuro (uma vez por mês)</string>
     <string name="i_wish_a_copy">Receber uma cópia do quiz por e-mail?</string>
     <string name="wish_more_future_quiz">Me envie mais quiz no futuro (uma vez por mês):</string>
-    <string name="are_you_active_athlete">Você ainda é uma atleta ativo?</string>
+    <string name="are_you_active_athlete">Você é um atleta ativo?</string>
     <string name="yes">SIM</string>
     <string name="no">NÃO</string>
     <string name="start_quiz">Iniciar Quiz</string>
@@ -92,6 +85,12 @@
     <string name="type_your_suggestions_here">Digite suas sugestões aqui</string>
     <string name="your_feedback">Your suggestions:</string>
     <string name="type_your_age">Type you age</string>
-
-
+    <string name="you_finish_the_quiz">Você finalizou o quiz!</string>
+    <string name="next_question_2_7">Próxima Pergunta 2 de 7</string>
+    <string name="next_question_3_7">Próxima Pergunta 3 de 7</string>
+    <string name="next_question_4_7">Próxima Pergunta 4 de 7</string>
+    <string name="next_question_5_7">Próxima Pergunta 5 de 7</string>
+    <string name="next_question_6_7">Próxima Pergunta 6 de 7</string>
+    <string name="next_question_7_7">Próxima Pergunta 7 de 7</string>
+    <string name="finish">FINALIZAR</string>
 </resources>

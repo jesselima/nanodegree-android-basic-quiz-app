@@ -7,11 +7,11 @@
     <string name="welcome_message2">First! Let me know you a little more filling up this simple form.</string>
     <string name="question_1_header">Question 1</string>
     <string name="question_1_body">There are how many jumping events athletics? Do not consider the gender.</string>
-    <string name="question_1_answer_1">2 events</string>
-    <string name="question_1_answer_2">4 events</string>
-    <string name="question_1_answer_3">6 events</string>
-    <string name="question_1_answer_4">8 events</string>
-    <string name="question_1_answer_5">10 events</string>
+    <string name="question_1_answer_1">2</string>
+    <string name="question_1_answer_2">4</string>
+    <string name="question_1_answer_3">6</string>
+    <string name="question_1_answer_4">8</string>
+    <string name="question_1_answer_5">10</string>
     <string name="question_2_header">Question 2</string>
     <string name="question_2_body">Who is the world record holder of high jump?</string>
     <string name="question_2_answer_1">Mutaz Essa BARSHIM</string>
@@ -42,11 +42,11 @@
     <string name="question_5_answer_5">Al Oerter</string>
     <string name="question_6_header">Question 6</string>
     <string name="question_6_body">There are how many throwing events athletics? Do not consider the gender.</string>
-    <string name="question_6_answer_1">2 events</string>
-    <string name="question_6_answer_2">4 events</string>
-    <string name="question_6_answer_3">8 events</string>
-    <string name="question_6_answer_4">5 events</string>
-    <string name="question_6_answer_5">9 events</string>
+    <string name="question_6_answer_1">2</string>
+    <string name="question_6_answer_2">4</string>
+    <string name="question_6_answer_3">8</string>
+    <string name="question_6_answer_4">5</string>
+    <string name="question_6_answer_5">9</string>
     <string name="send_by_email">Send by email</string>
     <string name="type_your_name">Type you name</string>
     <string name="type_your_email">Type your email</string>
@@ -85,5 +85,12 @@
     <string name="feedback_form">Did You like this quiz? Please, give us some feedback.</string>
     <string name="type_your_suggestions_here">Type your suggestions here</string>
     <string name="your_feedback">Your suggestions:</string>
-
+    <string name="you_finish_the_quiz">You finish the quiz!</string>
+    <string name="next_question_2_7">Next Question 2 of 7</string>
+    <string name="next_question_3_7">Next Question 3 of 7</string>
+    <string name="next_question_4_7">Next Question 4 of 7</string>
+    <string name="next_question_5_7">Next Question 5 of 7</string>
+    <string name="next_question_6_7">Next Question 6 of 7</string>
+    <string name="next_question_7_7">Next Question 7 of 7</string>
+    <string name="finish">FINISH</string>
 </resources>
