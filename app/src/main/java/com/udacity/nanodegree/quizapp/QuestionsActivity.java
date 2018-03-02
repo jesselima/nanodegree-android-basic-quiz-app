@@ -14,8 +14,17 @@ import android.widget.Toast;
 
 public class QuestionsActivity extends AppCompatActivity {
 
-    View card1,card2, card3, card4, card5, card6, cardComment, cardFinish;
-    Button btn1hideCard1show2, btn2hideCard2show3, btn3hideCard3show4, btn4hideCard4show5, btn5hideCard5show6, btn6hideCard6showComment, btn7hideCardCommentShowFinish, btnViewQuestionSummary;
+    View card1,card2, card3, card4, card5, card6, card7, card8, card9Comment, card10Finish;
+    Button btn1hideCard1show2,
+            btn2hideCard2show3,
+            btn3hideCard3show4,
+            btn4hideCard4show5,
+            btn5hideCard5show6,
+            btn6hideCard6show7,
+            btn7hideCard7show8,
+            btn8hideCard8showComment,
+            btn9hideCardCommentShowCardFinish,
+            btn10ViewQuestionSummary;
     private ProgressBar progressBar;
     private int progressStatus = 0;
 
@@ -33,17 +42,21 @@ public class QuestionsActivity extends AppCompatActivity {
         card4 = findViewById(R.id.card_question_4);
         card5 = findViewById(R.id.card_question_5);
         card6 = findViewById(R.id.card_question_6);
-        cardComment = findViewById(R.id.card_comment);
-        cardFinish = findViewById(R.id.card_finish);
+        card7 = findViewById(R.id.card_question_7);
+        card8 = findViewById(R.id.card_question_8);
+        card9Comment = findViewById(R.id.card_comment);
+        card10Finish = findViewById(R.id.card_finish);
         // Reference to buttons IDs
         btn1hideCard1show2 = findViewById(R.id.btn_hide_card_1_show_2);
         btn2hideCard2show3 = findViewById(R.id.btn_hide_card_2_show_3);
         btn3hideCard3show4 = findViewById(R.id.btn_hide_card_3_show_4);
         btn4hideCard4show5 = findViewById(R.id.btn_hide_card_4_show_5);
         btn5hideCard5show6 = findViewById(R.id.btn_hide_card_5_show_6);
-        btn6hideCard6showComment = findViewById(R.id.hide_card_6_show_comment);
-        btn7hideCardCommentShowFinish = findViewById(R.id.btn_hide_comment_show_finish);
-        btnViewQuestionSummary = findViewById(R.id.btn_view_summary);
+        btn6hideCard6show7 = findViewById(R.id.btn_hide_card_6_show_7);
+        btn7hideCard7show8 = findViewById(R.id.btn_hide_card_7_show_8);
+        btn8hideCard8showComment = findViewById(R.id.btn_hide_card_8_show_comment);
+        btn9hideCardCommentShowCardFinish = findViewById(R.id.btn_hide_comment_show_finish);
+        btn10ViewQuestionSummary = findViewById(R.id.btn_view_summary);
     }
 
     // ######## HIDE AND SHOW CARDS METHODS #########
@@ -210,9 +223,9 @@ public class QuestionsActivity extends AppCompatActivity {
                 card6.setVisibility(View.VISIBLE);
             }
         }, 500);
-        btn6hideCard6showComment.postDelayed(new Runnable() {
+        btn6hideCard6show7.postDelayed(new Runnable() {
             public void run() {
-                btn6hideCard6showComment.setVisibility(View.VISIBLE);
+                btn6hideCard6show7.setVisibility(View.VISIBLE);
             }
         }, 800);
 
@@ -220,7 +233,7 @@ public class QuestionsActivity extends AppCompatActivity {
         progressBar.setProgress(progressStatus);
     }
 
-    public void btn6hideCard6showComment(View view){
+    public void btn6hideCard6show7(View view){
 
         RadioGroup radioGroupCheck = findViewById(R.id.radio_group_question_6);
         if (radioGroupCheck.getCheckedRadioButtonId() == -1){
@@ -233,21 +246,21 @@ public class QuestionsActivity extends AppCompatActivity {
                 card6.setVisibility(View.GONE);
             }
         }, 300);
-        btn6hideCard6showComment.postDelayed(new Runnable() {
+        btn6hideCard6show7.postDelayed(new Runnable() {
             public void run() {
-                btn6hideCard6showComment.setVisibility(View.GONE);
+                btn6hideCard6show7.setVisibility(View.GONE);
             }
         }, 300);
 
-        cardComment.postDelayed(new Runnable() {
+        card7.postDelayed(new Runnable() {
             public void run() {
-                cardComment.setVisibility(View.VISIBLE);
+                card7.setVisibility(View.VISIBLE);
             }
         }, 500);
 
-        btn7hideCardCommentShowFinish.postDelayed(new Runnable() {
+        btn7hideCard7show8.postDelayed(new Runnable() {
             public void run() {
-                btn7hideCardCommentShowFinish.setVisibility(View.VISIBLE);
+                btn7hideCard7show8.setVisibility(View.VISIBLE);
             }
         }, 800);
 
@@ -255,28 +268,86 @@ public class QuestionsActivity extends AppCompatActivity {
         progressBar.setProgress(progressStatus);
     }
 
-    public void btn7hideCardCommentShowFinish(View view){
-        cardComment.postDelayed(new Runnable() {
+    public void btn7hideCard7show8(View view){
+        card7.postDelayed(new Runnable() {
             public void run() {
-                cardComment.setVisibility(View.GONE);
+                card7.setVisibility(View.GONE);
             }
         }, 300);
 
-        btn7hideCardCommentShowFinish.postDelayed(new Runnable() {
+        btn7hideCard7show8.postDelayed(new Runnable() {
             public void run() {
-                btn7hideCardCommentShowFinish.setVisibility(View.GONE);
+                btn7hideCard7show8.setVisibility(View.GONE);
             }
         }, 300);
 
-        cardFinish.postDelayed(new Runnable() {
+        card8.postDelayed(new Runnable() {
             public void run() {
-                cardFinish.setVisibility(View.VISIBLE);
+                card8.setVisibility(View.VISIBLE);
             }
         }, 500);
 
-        btnViewQuestionSummary.postDelayed(new Runnable() {
+        btn8hideCard8showComment.postDelayed(new Runnable() {
             public void run() {
-                btnViewQuestionSummary.setVisibility(View.VISIBLE);
+                btn8hideCard8showComment.setVisibility(View.VISIBLE);
+            }
+        }, 800);
+
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
+    }
+
+    public void btn8hideCard8showComment(View view){
+        card8.postDelayed(new Runnable() {
+            public void run() {
+                card8.setVisibility(View.GONE);
+            }
+        }, 300);
+
+        btn8hideCard8showComment.postDelayed(new Runnable() {
+            public void run() {
+                btn8hideCard8showComment.setVisibility(View.GONE);
+            }
+        }, 300);
+
+        card9Comment.postDelayed(new Runnable() {
+            public void run() {
+                card9Comment.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+
+        btn10ViewQuestionSummary.postDelayed(new Runnable() {
+            public void run() {
+                btn10ViewQuestionSummary.setVisibility(View.VISIBLE);
+            }
+        }, 800);
+
+        progressStatus += 10;
+        progressBar.setProgress(progressStatus);
+    }
+
+    public void btn9hideCardCommentShowCardFinish(View view){
+        card9Comment.postDelayed(new Runnable() {
+            public void run() {
+                card9Comment.setVisibility(View.GONE);
+            }
+        }, 300);
+
+        btn9hideCardCommentShowCardFinish.postDelayed(new Runnable() {
+            public void run() {
+                btn9hideCardCommentShowCardFinish.setVisibility(View.GONE);
+            }
+        }, 300);
+
+        card10Finish.postDelayed(new Runnable() {
+            public void run() {
+                card10Finish.setVisibility(View.VISIBLE);
+            }
+        }, 500);
+
+        btn10ViewQuestionSummary.postDelayed(new Runnable() {
+            public void run() {
+                btn10ViewQuestionSummary.setVisibility(View.VISIBLE);
             }
         }, 800);
 

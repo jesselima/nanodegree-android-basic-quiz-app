@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="16dp"
-    android:orientation="vertical"
     android:animateLayoutChanges="true"
+    android:orientation="vertical"
     tools:context="com.udacity.nanodegree.quizapp.QuestionsActivity">
 
     <ProgressBar
@@ -15,8 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:progress="0"
-        android:max="70"/>
+        android:max="90"
+        android:progress="0"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,11 +28,11 @@
         android:orientation="vertical">
 
             <android.support.v7.widget.CardView
+                android:id="@+id/card_question_1"
                 style="@style/cardBaseLayout"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
                 android:visibility="visible"
-                android:id="@+id/card_question_1">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -42,38 +42,38 @@
                        style="@style/questionBody"
                        android:text="@string/question_1_body"/>
                     <RadioGroup
-                       style="@style/radioGroupRoot"
-                        android:id="@+id/radio_group_question_1">
+                       android:id="@+id/radio_group_question_1"
+                        style="@style/radioGroupRoot">
                            <RadioButton
+                               android:id="@+id/q1_option_1"
                                style="@style/radioButton"
-                               android:text="@string/question_1_answer_1"
-                               android:id="@+id/q1_option_1"/>
+                               android:text="@string/question_1_answer_1"/>
                            <RadioButton
+                               android:id="@+id/q1_option_2"
                                style="@style/radioButton"
-                               android:text="@string/question_1_answer_2"
-                               android:id="@+id/q1_option_2"/>
+                               android:text="@string/question_1_answer_2"/>
                            <RadioButton
+                               android:id="@+id/q1_option_3"
                                style="@style/radioButton"
-                               android:text="@string/question_1_answer_3"
-                               android:id="@+id/q1_option_3"/>
+                               android:text="@string/question_1_answer_3"/>
                            <RadioButton
+                               android:id="@+id/q1_option_4"
                                style="@style/radioButton"
-                               android:text="@string/question_1_answer_4"
-                               android:id="@+id/q1_option_4"/>
+                               android:text="@string/question_1_answer_4"/>
                             <RadioButton
+                               android:id="@+id/q1_option_5"
                                style="@style/radioButton"
-                               android:text="@string/question_1_answer_5"
-                                android:id="@+id/q1_option_5"/>
+                                android:text="@string/question_1_answer_5"/>
                     </RadioGroup>
                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/card_question_2"
                 style="@style/cardBaseLayout"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
                 android:visibility="gone"
-                android:id="@+id/card_question_2">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -83,8 +83,8 @@
                        style="@style/questionBody"
                        android:text="@string/question_2_body"/>
                     <RadioGroup
-                       style="@style/radioGroupRoot"
-                        android:id="@+id/radio_group_question_2">
+                       android:id="@+id/radio_group_question_2"
+                        style="@style/radioGroupRoot">
                            <RadioButton
                                style="@style/radioButton"
                                android:text="@string/question_2_answer_1" />
@@ -105,11 +105,11 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/card_question_3"
                 style="@style/cardBaseLayout"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
                 android:visibility="gone"
-                android:id="@+id/card_question_3">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -119,8 +119,8 @@
                        style="@style/questionBody"
                        android:text="@string/question_3_body"/>
                     <RadioGroup
-                       style="@style/radioGroupRoot"
-                        android:id="@+id/radio_group_question_3">
+                       android:id="@+id/radio_group_question_3"
+                        style="@style/radioGroupRoot">
                            <RadioButton
                                style="@style/radioButton"
                                android:text="@string/question_3_answer_1" />
@@ -141,11 +141,11 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/card_question_4"
                 style="@style/cardBaseLayout"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
                 android:visibility="gone"
-                android:id="@+id/card_question_4">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -155,8 +155,8 @@
                        style="@style/questionBody"
                        android:text="@string/question_4_body"/>
                     <RadioGroup
-                       style="@style/radioGroupRoot"
-                        android:id="@+id/radio_group_question_4">
+                       android:id="@+id/radio_group_question_4"
+                        style="@style/radioGroupRoot">
                            <RadioButton
                                style="@style/radioButton"
                                android:text="@string/question_4_answer_1" />
@@ -177,11 +177,11 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/card_question_5"
                 style="@style/cardBaseLayout"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
                 android:visibility="gone"
-                android:id="@+id/card_question_5">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -191,8 +191,8 @@
                        style="@style/questionBody"
                        android:text="@string/question_5_body"/>
                     <RadioGroup
-                       style="@style/radioGroupRoot"
-                        android:id="@+id/radio_group_question_5">
+                       android:id="@+id/radio_group_question_5"
+                        style="@style/radioGroupRoot">
                            <RadioButton
                                style="@style/radioButton"
                                android:text="@string/question_5_answer_1" />
@@ -213,11 +213,11 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/card_question_6"
                 style="@style/cardBaseLayout"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
                 android:visibility="gone"
-                android:id="@+id/card_question_6">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -227,8 +227,8 @@
                        style="@style/questionBody"
                        android:text="@string/question_6_body"/>
                     <RadioGroup
-                       style="@style/radioGroupRoot"
-                        android:id="@+id/radio_group_question_6">
+                       android:id="@+id/radio_group_question_6"
+                        style="@style/radioGroupRoot">
                            <RadioButton
                                style="@style/radioButton"
                                android:text="@string/question_6_answer_1" />
@@ -248,34 +248,153 @@
                </LinearLayout>
             </android.support.v7.widget.CardView>
 
+            <!-- CHECKBOX QUESTION -->
             <android.support.v7.widget.CardView
+                android:id="@+id/card_question_7"
                 style="@style/cardBaseLayout"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
                 android:visibility="gone"
-                android:id="@+id/card_comment">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_7_header"/>
+                    <TextView
+                        style="@style/questionBody"
+                        android:text="@string/question_7_body"/>
+                    <CheckBox
+                        android:id="@+id/question_7_checkbox_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/question_7_answer_1"/>
+                    <CheckBox
+                        android:id="@+id/question_7_checkbox_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/question_7_answer_2"/>
+                    <CheckBox
+                        android:id="@+id/question_7_checkbox_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/question_7_answer_3"/>
+                    <CheckBox
+                        android:id="@+id/question_7_checkbox_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/question_7_answer_4"/>
+                    <CheckBox
+                        android:id="@+id/question_7_checkbox_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/question_7_answer_5"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- TEXT INPUT QUESTION -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_question_8"
+                style="@style/cardBaseLayout"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_8_header"/>
+                    <TextView
+                        style="@style/questionBody"
+                        android:text="@string/question_8_body"/>
+
+                    <TextView
+                        style="@style/editTextForm"
+                        android:text="@string/question_8_answer_1_title" />
+                    <EditText
+                        android:id="@+id/question_8_answer_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/question_8_answer_hint"
+                        android:inputType="textCapWords"/>
+
+                    <TextView
+                        style="@style/editTextForm"
+                        android:text="@string/question_8_answer_2_title" />
+                    <EditText
+                        android:id="@+id/question_8_answer_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/question_8_answer_hint"
+                        android:inputType="textCapWords"/>
+
+                    <TextView
+                        style="@style/editTextForm"
+                        android:text="@string/question_8_answer_3_title" />
+                    <EditText
+                        android:id="@+id/question_8_answer_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/question_8_answer_hint"
+                        android:inputType="textCapWords"/>
+
+                    <TextView
+                        style="@style/editTextFormQuestions"
+                        android:text="@string/question_8_answer_4_title" />
+                    <EditText
+                        android:id="@+id/question_8_answer_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/question_8_answer_hint"
+                        android:inputType="textCapWords"/>
+
+                    <TextView
+                        style="@style/editTextFormQuestions"
+                        android:text="@string/question_8_answer_5_title" />
+                    <EditText
+                        android:id="@+id/question_8_answer_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/question_8_answer_hint"
+                        android:inputType="textCapWords"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- FEEDBACK CARD -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_comment"
+                style="@style/cardBaseLayout"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
                         style="@style/questionBody"
                         android:text="@string/feedback_form"/>
                     <EditText
-                        android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
                         android:id="@+id/comment"
-                        android:text=""
-                        android:minLines="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/type_your_suggestions_here"
                         android:maxLines="5"
-                        android:hint="@string/type_your_suggestions_here"/>
+                        android:minLines="3"
+                        android:text=""/>
                  </LinearLayout>
             </android.support.v7.widget.CardView>
 
+            <!-- YOU HAVE FINISHED THE QUIZ -->
             <android.support.v7.widget.CardView
+                android:id="@+id/card_finish"
                 style="@style/cardBaseLayout"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
                 android:visibility="gone"
-                android:id="@+id/card_finish">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -285,60 +404,74 @@
             </android.support.v7.widget.CardView>
 
             <Button
+                android:id="@+id/btn_hide_card_1_show_2"
                 style="@style/buttonDefault"
                 android:onClick="btn1hideCard1show2"
-                android:id="@+id/btn_hide_card_1_show_2"
-                android:text="@string/next_question_2_7"
+                android:text="@string/next_question_2_8"
                 android:visibility="visible"/>
 
             <Button
+                android:id="@+id/btn_hide_card_2_show_3"
                 style="@style/buttonDefault"
                 android:onClick="btn2hideCard2show3"
-                android:id="@+id/btn_hide_card_2_show_3"
-                android:text="@string/next_question_3_7"
+                android:text="@string/next_question_3_8"
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btn_hide_card_3_show_4"
                 style="@style/buttonDefault"
                 android:onClick="btn3hideCard3show4"
-                android:id="@+id/btn_hide_card_3_show_4"
-                android:text="Next Question 4/7"
+                android:text="@string/next_question_4_8"
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btn_hide_card_4_show_5"
                 style="@style/buttonDefault"
                 android:onClick="btn4hideCard4show5"
-                android:id="@+id/btn_hide_card_4_show_5"
-                android:text="@string/next_question_5_7"
+                android:text="@string/next_question_5_8"
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btn_hide_card_5_show_6"
                 style="@style/buttonDefault"
                 android:onClick="btn5hideCard5show6"
-                android:id="@+id/btn_hide_card_5_show_6"
-                android:text="@string/next_question_6_7"
+                android:text="@string/next_question_6_8"
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btn_hide_card_6_show_7"
                 style="@style/buttonDefault"
-                android:onClick="btn6hideCard6showComment"
-                android:id="@+id/hide_card_6_show_comment"
-                android:text="@string/next_question_7_7"
+                android:onClick="btn6hideCard6show7"
+                android:text="@string/next_question_7_8"
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btn_hide_card_7_show_8"
                 style="@style/buttonDefault"
-                android:onClick="btn7hideCardCommentShowFinish"
+                android:onClick="btn7hideCard7show8"
+                android:text="@string/next_question_8_8"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_hide_card_8_show_comment"
+                style="@style/buttonDefault"
+                android:onClick="btn8hideCard8showComment"
+                android:text="@string/next_question_7_8"
+                android:visibility="gone"/>
+
+            <Button
                 android:id="@+id/btn_hide_comment_show_finish"
+                style="@style/buttonDefault"
+                android:onClick="btn9hideCardCommentShowCardFinish"
                 android:text="@string/finish"
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/btn_view_summary"
                 style="@style/buttonDefault"
                 android:onClick="ViewSummary"
-                android:id="@+id/btn_view_summary"
-                android:visibility="gone"
-                android:text="@string/answers_summary"/>
+                android:text="@string/answers_summary"
+                android:visibility="gone"/>
 
         </LinearLayout>
     </ScrollView>
