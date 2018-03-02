@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="16dp"
     android:orientation="vertical"
     android:animateLayoutChanges="true"
@@ -28,6 +29,8 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
                 android:visibility="visible"
                 android:id="@+id/card_question_1">
                 <LinearLayout
@@ -67,6 +70,8 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
                 android:visibility="gone"
                 android:id="@+id/card_question_2">
                 <LinearLayout
@@ -101,6 +106,8 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
                 android:visibility="gone"
                 android:id="@+id/card_question_3">
                 <LinearLayout
@@ -135,6 +142,8 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
                 android:visibility="gone"
                 android:id="@+id/card_question_4">
                 <LinearLayout
@@ -169,6 +178,8 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
                 android:visibility="gone"
                 android:id="@+id/card_question_5">
                 <LinearLayout
@@ -203,6 +214,8 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
                 android:visibility="gone"
                 android:id="@+id/card_question_6">
                 <LinearLayout
@@ -237,6 +250,8 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
                 android:visibility="gone"
                 android:id="@+id/card_comment">
                 <LinearLayout
@@ -257,6 +272,8 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
                 android:visibility="gone"
                 android:id="@+id/card_finish">
                 <LinearLayout
