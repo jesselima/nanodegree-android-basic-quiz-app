@@ -67,6 +67,12 @@
                     </RadioGroup>
                </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_card_1_show_2"
+                style="@style/buttonDefault"
+                android:onClick="btn1hideCard1show2"
+                android:text="@string/next_question_2_8"
+                android:visibility="visible"/>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/card_question_2"
@@ -103,6 +109,12 @@
                     </RadioGroup>
                </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_card_2_show_3"
+                style="@style/buttonDefault"
+                android:onClick="btn2hideCard2show3"
+                android:text="@string/next_question_3_8"
+                android:visibility="gone"/>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/card_question_3"
@@ -139,6 +151,12 @@
                     </RadioGroup>
                </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_card_3_show_4"
+                style="@style/buttonDefault"
+                android:onClick="btn3hideCard3show4"
+                android:text="@string/next_question_4_8"
+                android:visibility="gone"/>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/card_question_4"
@@ -175,6 +193,12 @@
                     </RadioGroup>
                </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_card_4_show_5"
+                style="@style/buttonDefault"
+                android:onClick="btn4hideCard4show5"
+                android:text="@string/next_question_5_8"
+                android:visibility="gone"/>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/card_question_5"
@@ -211,6 +235,12 @@
                     </RadioGroup>
                </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_card_5_show_6"
+                style="@style/buttonDefault"
+                android:onClick="btn5hideCard5show6"
+                android:text="@string/next_question_6_8"
+                android:visibility="gone"/>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/card_question_6"
@@ -247,6 +277,12 @@
                     </RadioGroup>
                </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_card_6_show_7"
+                style="@style/buttonDefault"
+                android:onClick="btn6hideCard6show7"
+                android:text="@string/next_question_7_8"
+                android:visibility="gone"/>
 
             <!-- CHECKBOX QUESTION -->
             <android.support.v7.widget.CardView
@@ -296,6 +332,12 @@
                         android:text="@string/question_7_answer_5"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_card_7_show_8"
+                style="@style/buttonDefault"
+                android:onClick="btn7hideCard7show8"
+                android:text="@string/next_question_8_8"
+                android:visibility="gone"/>
 
             <!-- TEXT INPUT QUESTION -->
             <android.support.v7.widget.CardView
@@ -312,7 +354,6 @@
                     <TextView
                         style="@style/questionBody"
                         android:text="@string/question_8_body"/>
-
                     <TextView
                         style="@style/editTextForm"
                         android:text="@string/question_8_answer_1_title" />
@@ -322,7 +363,6 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
                         android:inputType="textCapWords"/>
-
                     <TextView
                         style="@style/editTextForm"
                         android:text="@string/question_8_answer_2_title" />
@@ -332,7 +372,6 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
                         android:inputType="textCapWords"/>
-
                     <TextView
                         style="@style/editTextForm"
                         android:text="@string/question_8_answer_3_title" />
@@ -342,7 +381,6 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
                         android:inputType="textCapWords"/>
-
                     <TextView
                         style="@style/editTextFormQuestions"
                         android:text="@string/question_8_answer_4_title" />
@@ -352,7 +390,6 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
                         android:inputType="textCapWords"/>
-
                     <TextView
                         style="@style/editTextFormQuestions"
                         android:text="@string/question_8_answer_5_title" />
@@ -364,6 +401,12 @@
                         android:inputType="textCapWords"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_card_8_show_comment"
+                style="@style/buttonDefault"
+                android:onClick="btn8hideCard8showComment"
+                android:text="@string/finish"
+                android:visibility="gone"/>
 
             <!-- FEEDBACK CARD -->
             <android.support.v7.widget.CardView
@@ -387,6 +430,12 @@
                         android:text=""/>
                  </LinearLayout>
             </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/btn_hide_comment_show_finish"
+                style="@style/buttonDefault"
+                android:onClick="btn9hideCardCommentShowCardFinish"
+                android:text="@string/finish"
+                android:visibility="gone"/>
 
             <!-- YOU HAVE FINISHED THE QUIZ -->
             <android.support.v7.widget.CardView
@@ -402,70 +451,6 @@
                         android:text="@string/you_finish_the_quiz"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
-            <Button
-                android:id="@+id/btn_hide_card_1_show_2"
-                style="@style/buttonDefault"
-                android:onClick="btn1hideCard1show2"
-                android:text="@string/next_question_2_8"
-                android:visibility="visible"/>
-
-            <Button
-                android:id="@+id/btn_hide_card_2_show_3"
-                style="@style/buttonDefault"
-                android:onClick="btn2hideCard2show3"
-                android:text="@string/next_question_3_8"
-                android:visibility="gone"/>
-
-            <Button
-                android:id="@+id/btn_hide_card_3_show_4"
-                style="@style/buttonDefault"
-                android:onClick="btn3hideCard3show4"
-                android:text="@string/next_question_4_8"
-                android:visibility="gone"/>
-
-            <Button
-                android:id="@+id/btn_hide_card_4_show_5"
-                style="@style/buttonDefault"
-                android:onClick="btn4hideCard4show5"
-                android:text="@string/next_question_5_8"
-                android:visibility="gone"/>
-
-            <Button
-                android:id="@+id/btn_hide_card_5_show_6"
-                style="@style/buttonDefault"
-                android:onClick="btn5hideCard5show6"
-                android:text="@string/next_question_6_8"
-                android:visibility="gone"/>
-
-            <Button
-                android:id="@+id/btn_hide_card_6_show_7"
-                style="@style/buttonDefault"
-                android:onClick="btn6hideCard6show7"
-                android:text="@string/next_question_7_8"
-                android:visibility="gone"/>
-
-            <Button
-                android:id="@+id/btn_hide_card_7_show_8"
-                style="@style/buttonDefault"
-                android:onClick="btn7hideCard7show8"
-                android:text="@string/next_question_8_8"
-                android:visibility="gone"/>
-
-            <Button
-                android:id="@+id/btn_hide_card_8_show_comment"
-                style="@style/buttonDefault"
-                android:onClick="btn8hideCard8showComment"
-                android:text="@string/next_question_7_8"
-                android:visibility="gone"/>
-
-            <Button
-                android:id="@+id/btn_hide_comment_show_finish"
-                style="@style/buttonDefault"
-                android:onClick="btn9hideCardCommentShowCardFinish"
-                android:text="@string/finish"
-                android:visibility="gone"/>
-
             <Button
                 android:id="@+id/btn_view_summary"
                 style="@style/buttonDefault"
