@@ -9,6 +9,8 @@
     tools:context="com.udacity.nanodegree.quizapp.SummaryActivity">
     <TextView
         style="@style/questionHeader"
+        android:visibility="gone"
+        android:id="@+id/summary_title"
         android:text="@string/answers_summary"/>
 
     <ScrollView
@@ -20,76 +22,85 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/summary_header">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/points_earned"
-                    android:textSize="16sp"/>
-                <TextView
-                    android:id="@+id/points_earned"
-                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/points_earned"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/points_earned"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text=""
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/you_hit"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/number_of_hit_questions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text=""
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_feeling"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/feeling_cool"/>
+
+                <TextView
+                    android:id="@+id/text_feeling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="8dp"
+                    android:textStyle="bold"
                     android:text=""
-                    android:textSize="24sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/you_hit"
-                    android:textSize="16sp"/>
-                <TextView
-                    android:id="@+id/number_of_hit_questions"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:text=""
-                    android:textSize="24sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/img_feeling"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:src="@drawable/feeling_cool"/>
-
-            <TextView
-                android:id="@+id/text_feeling"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:layout_margin="8dp"
-                android:textStyle="bold"
-                android:text="X"
                 android:textSize="24sp"/>
+            </LinearLayout>
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                android:id="@+id/card_summary_question_1"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                android:visibility="visible">
+                android:visibility="gone">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
 
@@ -132,9 +143,10 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                android:id="@+id/card_summary_question_2"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                android:visibility="visible">
+                android:visibility="gone">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -176,9 +188,10 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                android:id="@+id/card_summary_question_3"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                android:visibility="visible">
+                android:visibility="gone">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -221,9 +234,10 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                android:id="@+id/card_summary_question_4"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                android:visibility="visible">
+                android:visibility="gone">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -266,9 +280,10 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                android:id="@+id/card_summary_question_5"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                android:visibility="visible">
+                android:visibility="gone">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -311,9 +326,10 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                android:id="@+id/card_summary_question_6"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                android:visibility="visible">
+                android:visibility="gone">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -353,9 +369,10 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                android:id="@+id/card_summary_question_7"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                android:visibility="visible">
+                android:visibility="gone">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -375,7 +392,7 @@
                                 android:orientation="vertical">
                                 <TextView
                                     style="@style/summary_answers_header"
-                                    android:text="Questions:"/>
+                                    android:text="@string/questions"/>
 
                                 <TextView
                                     style="@style/summary_answers"
@@ -467,9 +484,10 @@
 
             <android.support.v7.widget.CardView
                 style="@style/cardBaseLayout"
+                android:id="@+id/card_summary_question_8"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                android:visibility="visible">
+                android:visibility="gone">
                 <LinearLayout
                     style="@style/cardLinearLayoutVertical">
                     <TextView
@@ -489,7 +507,7 @@
                             android:orientation="vertical">
                             <TextView
                                 style="@style/summary_answers_header"
-                                android:text="Questions:"/>
+                                android:text="@string/questions"/>
 
                             <TextView
                                 style="@style/summary_answers"
@@ -573,9 +591,25 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
+            <Button
+                style="@style/buttonDefault"
+                android:id="@+id/btn_show_results"
+                android:layout_gravity="center"
+                android:onClick="showResults"
+                android:text="@string/show_results"/>
 
             <Button
                 style="@style/buttonDefault"
+                android:visibility="gone"
+                android:id="@+id/btn_show_summary_cards"
+                android:layout_gravity="center"
+                android:onClick="showSummaryCards"
+                android:text="@string/show_summary"/>
+
+            <Button
+                style="@style/buttonDefault"
+                android:id="@+id/btn_send_by_email"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:onClick="sendQuizByEmail"
                 android:text="@string/send_by_email"/>

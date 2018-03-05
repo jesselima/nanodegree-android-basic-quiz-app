@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SummaryActivity extends AppCompatActivity {
+
+
     // Correct answers
     String correctAnswer1 = "4";
     String correctAnswer2 = "Javier Sotomayor";
@@ -30,7 +32,7 @@ public class SummaryActivity extends AppCompatActivity {
     final int pointsPerHit = 60;
     int numberOfHits = 0;
     int pointsEarned = 0;
-
+    int finalHits, finalPoints;
     String textHit = "You got a Hit!";
     String feelingNotSeen = "OK. Don't worry. I din't see this!";
     String feelingBad = "Ops! You really need do research!";
@@ -320,12 +322,12 @@ public class SummaryActivity extends AppCompatActivity {
         // update the points earned on the summary and show it as a toast message
         TextView hitsTextView = findViewById(R.id.number_of_hit_questions);
         hitsTextView.setText(String.valueOf(numberOfHits));
-        Toast.makeText(this, getString(R.string.you_made) + numberOfHits + getString(R.string.correct_hits), Toast.LENGTH_LONG).show();
+        finalHits = numberOfHits;
 
         // update the number of hits  on the summary and show it as a toast message
         TextView pointsTextView = findViewById(R.id.points_earned);
         pointsTextView.setText(String.valueOf(pointsEarned));
-        Toast.makeText(this, getString(R.string.earned) + pointsEarned + " points", Toast.LENGTH_LONG).show();
+        finalPoints = pointsEarned;
 
         // Update the summary header with text and image according to amount of questions hit
         if(numberOfHits < 3) {
@@ -333,37 +335,31 @@ public class SummaryActivity extends AppCompatActivity {
                 imgFeeling.setImageResource(R.drawable.feeling_not_seen);
             TextView textFelling = findViewById(R.id.text_feeling);
                 textFelling.setText(feelingNotSeen);
-            Toast.makeText(this, R.string.not_see_this, Toast.LENGTH_LONG).show();
         }else if(numberOfHits <= 6){
             ImageView imgFeeling = findViewById(R.id.img_feeling);
                 imgFeeling.setImageResource(R.drawable.feeling_crazy);
             TextView textFelling = findViewById(R.id.text_feeling);
                 textFelling.setText(feelingCrazy);
-            Toast.makeText(this, R.string.bad_result, Toast.LENGTH_LONG).show();
         }else if(numberOfHits <= 10){
             ImageView imgFeeling = findViewById(R.id.img_feeling);
                 imgFeeling.setImageResource(R.drawable.feeling_bad);
             TextView textFelling = findViewById(R.id.text_feeling);
                 textFelling.setText(feelingBad);
-            Toast.makeText(this, R.string.not_so_bad, Toast.LENGTH_LONG).show();
         }else if(numberOfHits <= 12){
             ImageView imgFeeling = findViewById(R.id.img_feeling);
                 imgFeeling.setImageResource(R.drawable.feeling_cool);
             TextView textFelling = findViewById(R.id.text_feeling);
                 textFelling.setText(feelingCool);
-            Toast.makeText(this, R.string.great_result, Toast.LENGTH_LONG).show();
         }else if(numberOfHits <= 15){
             ImageView imgFeeling = findViewById(R.id.img_feeling);
                 imgFeeling.setImageResource(R.drawable.feeling_ohhhhh);
             TextView textFelling = findViewById(R.id.text_feeling);
                 textFelling.setText(feelingCool);
-            Toast.makeText(this, R.string.awesome, Toast.LENGTH_LONG).show();
         }else{
             ImageView imgFeeling = findViewById(R.id.img_feeling);
                 imgFeeling.setImageResource(R.drawable.feeling_perfect);
             TextView textFelling = findViewById(R.id.text_feeling);
                 textFelling.setText(feelingAwesome);
-            Toast.makeText(this, R.string.perfect_result, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -590,6 +586,82 @@ public class SummaryActivity extends AppCompatActivity {
         userSummaryData += "\n " + commentText;
 
         return userSummaryData;
+    }
+
+    /**
+     * Shows the number of hits, points earned and feedback in a toast message when button SHow Results is clicked
+      * @param view
+     */
+    public void showResults(View view){
+
+        Toast.makeText(this, getString(R.string.you_made) + finalHits + getString(R.string.correct_hits), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.earned) + finalPoints + getString(R.string.points), Toast.LENGTH_LONG).show();
+
+        if(finalHits < 3) {
+            Toast.makeText(this, R.string.not_see_this, Toast.LENGTH_LONG).show();
+        }else if(finalHits <= 6){
+            Toast.makeText(this, R.string.bad_result, Toast.LENGTH_LONG).show();
+        }else if(finalHits <= 10){
+            Toast.makeText(this, R.string.not_so_bad, Toast.LENGTH_LONG).show();
+        }else if(finalHits <= 12){
+            Toast.makeText(this, R.string.great_result, Toast.LENGTH_LONG).show();
+        }else if(finalHits <= 15){
+            Toast.makeText(this, R.string.awesome, Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this, R.string.perfect_result, Toast.LENGTH_LONG).show();
+        }
+
+        View showSummaryTitle = findViewById(R.id.summary_title);
+        showSummaryTitle.setVisibility(View.VISIBLE);
+
+        View showSummaryHeader = findViewById(R.id.summary_header);
+        showSummaryHeader.setVisibility(View.VISIBLE);
+
+        final View btnSummaryCards;
+        btnSummaryCards = findViewById(R.id.btn_show_summary_cards);
+        btnSummaryCards.postDelayed(new Runnable() {
+            public void run() {
+                btnSummaryCards.setVisibility(View.VISIBLE);
+            }
+        }, 200);
+
+    }
+
+    /**
+     * Show all the cards of the summary
+     * @param view
+     */
+    public void showSummaryCards(View view){
+        View cardSummaryQuestion1 = findViewById(R.id.card_summary_question_1);
+            cardSummaryQuestion1.setVisibility(View.VISIBLE);
+
+        View cardSummaryQuestion2 = findViewById(R.id.card_summary_question_2);
+            cardSummaryQuestion2.setVisibility(View.VISIBLE);
+
+        View cardSummaryQuestion3 = findViewById(R.id.card_summary_question_3);
+            cardSummaryQuestion3.setVisibility(View.VISIBLE);
+
+        View cardSummaryQuestion4 = findViewById(R.id.card_summary_question_4);
+            cardSummaryQuestion4.setVisibility(View.VISIBLE);
+
+        View cardSummaryQuestion5 = findViewById(R.id.card_summary_question_5);
+            cardSummaryQuestion5.setVisibility(View.VISIBLE);
+
+        View cardSummaryQuestion6 = findViewById(R.id.card_summary_question_6);
+            cardSummaryQuestion6.setVisibility(View.VISIBLE);
+
+        View cardSummaryQuestion7 = findViewById(R.id.card_summary_question_7);
+        cardSummaryQuestion7.setVisibility(View.VISIBLE);
+
+        View cardSummaryQuestion8 = findViewById(R.id.card_summary_question_8);
+        cardSummaryQuestion8.setVisibility(View.VISIBLE);
+
+        View btnShowSummaryCards = findViewById(R.id.btn_show_summary_cards);
+        btnShowSummaryCards.setVisibility(View.VISIBLE);
+
+        View btnSendByEmail = findViewById(R.id.btn_send_by_email);
+        btnSendByEmail.setVisibility(View.VISIBLE);
+
     }
 
 }

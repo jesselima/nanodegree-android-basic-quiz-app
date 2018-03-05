@@ -410,7 +410,7 @@
                 android:id="@+id/btn_hide_card_8_show_comment"
                 style="@style/buttonDefault"
                 android:onClick="btn8hideCard8showComment"
-                android:text="@string/finish"
+                android:text="@string/next_feedback"
                 android:visibility="gone"/>
 
             <!-- FEEDBACK CARD -->
@@ -439,7 +439,7 @@
                 android:id="@+id/btn_hide_comment_show_finish"
                 style="@style/buttonDefault"
                 android:onClick="btn9hideCardCommentShowCardFinish"
-                android:text="@string/finish"
+                android:text="@string/next"
                 android:visibility="gone"/>
 
             <!-- YOU HAVE FINISHED THE QUIZ -->

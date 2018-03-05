@@ -317,9 +317,9 @@ public class QuestionsActivity extends AppCompatActivity {
             }
         }, 500);
 
-        btn10ViewQuestionSummary.postDelayed(new Runnable() {
+        btn9hideCardCommentShowCardFinish.postDelayed(new Runnable() {
             public void run() {
-                btn10ViewQuestionSummary.setVisibility(View.VISIBLE);
+                btn9hideCardCommentShowCardFinish.setVisibility(View.VISIBLE);
             }
         }, 800);
 
