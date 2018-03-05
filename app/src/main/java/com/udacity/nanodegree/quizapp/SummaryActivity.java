@@ -12,19 +12,23 @@ import android.widget.Toast;
 
 public class SummaryActivity extends AppCompatActivity {
 
-
     // Correct answers
-    String correctAnswer1 = "4";
-    String correctAnswer2 = "Javier Sotomayor";
-    String correctAnswer3 = "IAAF";
-    String correctAnswer4 = "Dick Fosbury";
-    String correctAnswer5 = "Carl Lewis";
-    String correctAnswer6 = "4";
-    String correctAnswer8text1 = "VERTICAL";
-    String correctAnswer8text2 = "THROW";
-    String correctAnswer8text3 = "HORIZONTAL";
-    String correctAnswer8text4 = "RACE WALK";
-    String correctAnswer8text5 = "COMBINED EVENTS";
+    String correctAnswer1;
+    String correctAnswer2;
+    String correctAnswer3;
+    String correctAnswer4;
+    String correctAnswer5;
+    String correctAnswer6;
+    String correctAnswer8text1;
+    String correctAnswer8text2;
+    String correctAnswer8text3;
+    String correctAnswer8text4;
+    String correctAnswer8text5;
+    String correctAnswer7checkbox1;
+    String correctAnswer7checkbox2;
+    String correctAnswer7checkbox3;
+    String correctAnswer7checkbox4;
+    String correctAnswer7checkbox5;
 
     boolean userQuestion7checkbox1, userQuestion7checkbox2, userQuestion7checkbox3, userQuestion7checkbox4, userQuestion7checkbox5;
     String userQuestion8text1, userQuestion8text2, userQuestion8text3, userQuestion8text4, userQuestion8text5;
@@ -33,17 +37,43 @@ public class SummaryActivity extends AppCompatActivity {
     int numberOfHits = 0;
     int pointsEarned = 0;
     int finalHits, finalPoints;
-    String textHit = "You got a Hit!";
-    String feelingNotSeen = "OK. Don't worry. I din't see this!";
-    String feelingBad = "Ops! You really need do research!";
-    String feelingCool = "Nice! You really know about athletics.";
-    String feelingCrazy = "Are you kidding me? You better try another quiz. This one is not for you.";
-    String feelingAwesome = "Perfect! You hit all questions. Congratulations!";
+    String textHit;
+    String feelingNotSeen;
+    String feelingCrazy;
+    String feelingBad;
+    String feelingCool;
+    String feelingOhhh;
+    String feelingPerfect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
+
+        correctAnswer1 = getString(R.string.correct_answer_1);
+        correctAnswer2 = getString(R.string.correct_answer_2);
+        correctAnswer3 = getString(R.string.correct_answer_3);
+        correctAnswer4 = getString(R.string.correct_answer_4);
+        correctAnswer5 = getString(R.string.correct_answer_5);
+        correctAnswer6 = getString(R.string.correct_answer_6);
+        correctAnswer8text1 = getString(R.string.correct_answer_8_1);
+        correctAnswer8text2 = getString(R.string.correct_answer_8_2);
+        correctAnswer8text3 = getString(R.string.correct_answer_8_3);
+        correctAnswer8text4 = getString(R.string.correct_answer_8_4);
+        correctAnswer8text5 = getString(R.string.correct_answer_8_5);
+        correctAnswer7checkbox1 = getString(R.string.yes);
+        correctAnswer7checkbox2 = getString(R.string.yes);
+        correctAnswer7checkbox3 = getString(R.string.no);
+        correctAnswer7checkbox4 = getString(R.string.yes);
+        correctAnswer7checkbox5 = getString(R.string.no);
+
+        textHit = getString(R.string.you_got_a_hit);
+        feelingNotSeen = getString(R.string.result_feedback_1);
+        feelingCrazy = getString(R.string.result_feedback_2);
+        feelingBad = getString(R.string.result_feedback_3);
+        feelingCool = getString(R.string.result_feedback_4);
+        feelingOhhh = getString(R.string.result_feedback_5);
+        feelingPerfect = getString(R.string.result_feedback_6);
 
         // Grab data from QuestionActivity by Intent
         Bundle userData = getIntent().getExtras();
@@ -354,12 +384,12 @@ public class SummaryActivity extends AppCompatActivity {
             ImageView imgFeeling = findViewById(R.id.img_feeling);
                 imgFeeling.setImageResource(R.drawable.feeling_ohhhhh);
             TextView textFelling = findViewById(R.id.text_feeling);
-                textFelling.setText(feelingCool);
+                textFelling.setText(feelingOhhh);
         }else{
             ImageView imgFeeling = findViewById(R.id.img_feeling);
                 imgFeeling.setImageResource(R.drawable.feeling_perfect);
             TextView textFelling = findViewById(R.id.text_feeling);
-                textFelling.setText(feelingAwesome);
+                textFelling.setText(feelingPerfect);
         }
     }
 
@@ -550,11 +580,48 @@ public class SummaryActivity extends AppCompatActivity {
         userSummaryData += "\n " + getString(R.string.correct_answer);
         userSummaryData += "\n " + correctAnswer6;
 
-        userSummaryData += "\n\n " + getString(R.string.question_7_answer_1) + ": " + userQuestion7checkbox1;
-        userSummaryData += "\n " + getString(R.string.question_7_answer_2) + ": " + userQuestion7checkbox2;
-        userSummaryData += "\n " + getString(R.string.question_7_answer_3) + ": " + userQuestion7checkbox3;
-        userSummaryData += "\n " + getString(R.string.question_7_answer_4) + ": " + userQuestion7checkbox4;
-        userSummaryData += "\n " + getString(R.string.question_7_answer_5) + ": " + userQuestion7checkbox5;
+        String userAnswer71, userAnswer72, userAnswer73, userAnswer74, userAnswer75;
+        if(userQuestion7checkbox1){
+            userAnswer71 = getString(R.string.yes);
+        }else{
+            userAnswer71 = getString(R.string.yes);
+        }
+        if(userQuestion7checkbox2){
+            userAnswer72 = getString(R.string.yes);
+        }else{
+            userAnswer72 = getString(R.string.yes);
+        }
+        if(userQuestion7checkbox3){
+            userAnswer73 = getString(R.string.yes);
+        }else{
+            userAnswer73 = getString(R.string.yes);
+        }
+        if(userQuestion7checkbox4){
+            userAnswer74 = getString(R.string.yes);
+        }else{
+            userAnswer74 = getString(R.string.yes);
+        }
+        if(userQuestion7checkbox5){
+            userAnswer75 = getString(R.string.yes);
+        }else{
+            userAnswer75 = getString(R.string.yes);
+        }
+        userSummaryData += "\n\n " + getString(R.string.question_7_body);
+        userSummaryData += "\n\n " + getString(R.string.question_7_answer_1);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userAnswer71;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer7checkbox1;
+        userSummaryData += "\n\n " + getString(R.string.question_7_answer_2);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userAnswer72;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer7checkbox2;
+        userSummaryData += "\n\n " + getString(R.string.question_7_answer_3);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userAnswer73;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer7checkbox3;
+        userSummaryData += "\n\n " + getString(R.string.question_7_answer_4);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userAnswer74;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer7checkbox4;
+        userSummaryData += "\n\n " + getString(R.string.question_7_answer_5);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userAnswer75;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer7checkbox5;
 
         userSummaryData += "\n\n " + getString(R.string.question_8_body);
         userSummaryData += "\n\n " + getString(R.string.question_8_answer_1_title);
