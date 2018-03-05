@@ -113,4 +113,9 @@
     <string name="next_question_8_8">Próxima Pergunta 8 de 8</string>
     <string name="finish">FINALIZAR</string>
     <string name="select_one_of_the_answers">Selecione uma das respostas.</string>
+    <string name="you_must_type_your_name">You must type your name</string>
+    <string name="you_must_type_your_email">You must type your email</string>
+    <string name="select_if_you_are_athlete">Select if you are athlete or not.</string>
+    <string name="age_can_not_be_empty">Age can not be empty.</string>
+    <string name="age_must_be_greater_than">Your age must be greater than 5.</string>
 </resources>

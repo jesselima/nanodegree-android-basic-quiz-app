@@ -362,7 +362,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
-                        android:inputType="textCapWords"/>
+                        android:textAllCaps="true"
+                        android:inputType="textCapCharacters"/>
                     <TextView
                         style="@style/editTextForm"
                         android:text="@string/question_8_answer_2_title" />
@@ -371,7 +372,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
-                        android:inputType="textCapWords"/>
+                        android:textAllCaps="true"
+                        android:inputType="textCapCharacters"/>
                     <TextView
                         style="@style/editTextForm"
                         android:text="@string/question_8_answer_3_title" />
@@ -380,7 +382,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
-                        android:inputType="textCapWords"/>
+                        android:textAllCaps="true"
+                        android:inputType="textCapCharacters"/>
                     <TextView
                         style="@style/editTextFormQuestions"
                         android:text="@string/question_8_answer_4_title" />
@@ -389,7 +392,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
-                        android:inputType="textCapWords"/>
+                        android:textAllCaps="true"
+                        android:inputType="textCapCharacters"/>
                     <TextView
                         style="@style/editTextFormQuestions"
                         android:text="@string/question_8_answer_5_title" />
@@ -398,7 +402,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/question_8_answer_hint"
-                        android:inputType="textCapWords"/>
+                        android:textAllCaps="true"
+                        android:inputType="textCapCharacters"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <Button

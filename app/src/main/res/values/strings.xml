@@ -55,12 +55,12 @@
     <string name="question_7_answer_4">Race Walk</string>
     <string name="question_7_answer_5">Marathon</string>
     <string name="question_8_header">Question 8</string>
-    <string name="question_8_body">Answer the questions bellow about the type of jump event. Use the answers VERTICAL, HORIZONTAL or DNA.  DNA Stands for Do Not Apply.</string>
+    <string name="question_8_body">Answer the questions typing the correct typ category. Use the answers THROW, VERTICAL, HORIZONTAL, COMBINED EVENTS or RACE WALK.</string>
     <string name="question_8_answer_hint">Type your answer</string>
     <string name="question_8_answer_1_title">High Jump</string>
     <string name="question_8_answer_2_title">Shot put</string>
     <string name="question_8_answer_3_title">Long Jump</string>
-    <string name="question_8_answer_4_title">Pole Vault</string>
+    <string name="question_8_answer_4_title">50km</string>
     <string name="question_8_answer_5_title">Decathlon</string>
     <string name="send_by_email">Send by email</string>
     <string name="type_your_name">Type you name</string>
@@ -83,7 +83,7 @@
     <string name="hit">\u0020 You got a Hit!</string>
     <string name="missed">\u0020 You missed it!</string>
     <string name="rate_this_quiz">Rate this quiz:</string>
-    <string name="correct_answer">The correct answer:</string>
+    <string name="correct_answer">Correct answer:</string>
     <string name="your_answer">Your answer:</string>
     <string name="am_i_active_athlete">Am I an active athlete?</string>
     <string name="feeling_not_seen">OK. Don\'t worry. I din\'t see this!</string>
@@ -91,12 +91,11 @@
     <string name="feeling_cool">Nice! You really know about athletics.</string>
     <string name="feeling_crazy">Are you kidding me? You better try another quiz. This one is not for you.</string>
     <string name="feeling_awesome">Perfect! You hit all questions. Congratulations!</string>
-    <string name="of_6_questions">of 6 questions</string>
-    <string name="user_answer_here">User answer here</string>
+    <string name="user_answer_here">User answer</string>
     <string name="correct_answer_here">Correct answer here</string>
     <string name="you_missed_this_one">You\'ve missed this one!</string>
     <string name="answers_summary">Answers Summary</string>
-    <string name="you_hit">You hit:</string>
+    <string name="you_hit">Number of Hits:</string>
     <string name="feedback_form">Did You like this quiz? Please, give us some feedback.</string>
     <string name="type_your_suggestions_here">Type your suggestions here</string>
     <string name="your_feedback">Your suggestions:</string>
@@ -110,4 +109,9 @@
     <string name="next_question_8_8">Next Question 8 of 8</string>
     <string name="finish">FINISH</string>
     <string name="select_one_of_the_answers">Select one of the answers.</string>
+    <string name="you_must_type_your_name">You must type your name</string>
+    <string name="you_must_type_your_email">You must type your email</string>
+    <string name="select_if_you_are_athlete">Select if you are athlete or not.</string>
+    <string name="age_can_not_be_empty">Age can not be empty.</string>
+    <string name="age_must_be_greater_than">Your age must be greater than 5.</string>
 </resources>

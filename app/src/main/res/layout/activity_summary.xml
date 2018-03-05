@@ -66,11 +66,6 @@
                     android:text=""
                     android:textSize="24sp"
                     android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/of_6_questions"/>
             </LinearLayout>
 
             <ImageView
@@ -347,8 +342,7 @@
                         <ImageView
                             android:id="@+id/img_answer_6"
                             style="@style/summary_bottom_layout_image"
-                            android:src="@drawable/question_missed"
-                            />
+                            android:src="@drawable/question_missed"/>
                         <TextView
                             android:id="@+id/summary_bottom_layout_text_6"
                             style="@style/summary_bottom_layout_text"
@@ -356,6 +350,229 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:visibility="visible">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_7_header"/>
+                    <TextView
+                        android:id="@+id/question7"
+                        style="@style/questionBody"
+                        android:text="@string/question_7_body" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    style="@style/summary_answers_header"
+                                    android:text="Questions:"/>
+
+                                <TextView
+                                    style="@style/summary_answers"
+                                    android:text="@string/question_7_answer_1"/>
+                                <TextView
+                                    style="@style/summary_answers"
+                                    android:text="@string/question_7_answer_2"/>
+                                <TextView
+                                    style="@style/summary_answers"
+                                    android:text="@string/question_7_answer_3"/>
+                                <TextView
+                                    style="@style/summary_answers"
+                                    android:text="@string/question_7_answer_4"/>
+                                <TextView
+                                    style="@style/summary_answers"
+                                    android:text="@string/question_7_answer_5"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    style="@style/summary_answers_header"
+                                    android:text="@string/your_answer"/>
+
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_user_option_1"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_missed"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_user_option_2"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_missed"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_user_option_3"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_missed"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_user_option_4"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_missed"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_user_option_5"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_missed"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    style="@style/summary_answers_header"
+                                    android:text="@string/correct_answer"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_correct_option_1"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_hit"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_correct_option_2"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_hit"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_correct_option_3"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_missed"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_correct_option_4"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_hit"/>
+
+                                <ImageView
+                                    android:id="@+id/img_question_7_correct_option_5"
+                                    style="@style/summary_bottom_layout_image"
+                                    android:src="@drawable/question_missed"/>
+                            </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardBaseLayout"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:visibility="visible">
+                <LinearLayout
+                    style="@style/cardLinearLayoutVertical">
+                    <TextView
+                        style="@style/questionHeader"
+                        android:text="@string/question_8_header"/>
+                    <TextView
+                        android:id="@+id/question8"
+                        style="@style/questionBody"
+                        android:text="@string/question_8_body" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                style="@style/summary_answers_header"
+                                android:text="Questions:"/>
+
+                            <TextView
+                                style="@style/summary_answers"
+                                android:text="@string/question_8_answer_1_title"/>
+                            <TextView
+                                style="@style/summary_answers"
+                                android:text="@string/question_8_answer_2_title"/>
+                            <TextView
+                                style="@style/summary_answers"
+                                android:text="@string/question_8_answer_3_title"/>
+                            <TextView
+                                style="@style/summary_answers"
+                                android:text="@string/question_8_answer_4_title"/>
+                            <TextView
+                                style="@style/summary_answers"
+                                android:text="@string/question_8_answer_5_title"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                style="@style/summary_answers_header"
+                                android:text="@string/your_answer"/>
+
+                            <ImageView
+                                android:id="@+id/img_question_8_correct_option_1"
+                                style="@style/summary_bottom_layout_image"
+                                android:src="@drawable/question_missed"/>
+
+                            <ImageView
+                                android:id="@+id/img_question_8_correct_option_2"
+                                style="@style/summary_bottom_layout_image"
+                                android:src="@drawable/question_missed"/>
+
+                            <ImageView
+                                android:id="@+id/img_question_8_correct_option_3"
+                                style="@style/summary_bottom_layout_image"
+                                android:src="@drawable/question_missed"/>
+
+                            <ImageView
+                                android:id="@+id/img_question_8_correct_option_4"
+                                style="@style/summary_bottom_layout_image"
+                                android:src="@drawable/question_missed"/>
+
+                            <ImageView
+                                android:id="@+id/img_question_8_correct_option_5"
+                                style="@style/summary_bottom_layout_image"
+                                android:src="@drawable/question_missed"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                style="@style/summary_answers_header"
+                                android:text="@string/correct_answer"/>
+
+                            <TextView
+                                style="@style/summary_answers"
+                                android:id="@+id/question_8_correct_option_1"
+                                android:text="@string/correct_answer_here"/>
+                            <TextView
+                                style="@style/summary_answers"
+                                android:id="@+id/question_8_correct_option_2"
+                                android:text="@string/correct_answer_here"/>
+                            <TextView
+                                style="@style/summary_answers"
+                                android:id="@+id/question_8_correct_option_3"
+                                android:text="@string/correct_answer_here"/>
+                            <TextView
+                                style="@style/summary_answers"
+                                android:id="@+id/question_8_correct_option_4"
+                                android:text="@string/correct_answer_here"/>
+                            <TextView
+                                style="@style/summary_answers"
+                                android:id="@+id/question_8_correct_option_5"
+                                android:text="@string/correct_answer_here"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
 
             <Button
                 style="@style/buttonDefault"

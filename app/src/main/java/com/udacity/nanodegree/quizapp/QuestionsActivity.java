@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
@@ -35,7 +36,7 @@ public class QuestionsActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
 
-        // Reference to cards IDs
+        // References to cards IDs
         card1 = findViewById(R.id.card_question_1);
         card2 = findViewById(R.id.card_question_2);
         card3 = findViewById(R.id.card_question_3);
@@ -46,7 +47,7 @@ public class QuestionsActivity extends AppCompatActivity {
         card8 = findViewById(R.id.card_question_8);
         card9Comment = findViewById(R.id.card_comment);
         card10Finish = findViewById(R.id.card_finish);
-        // Reference to buttons IDs
+        // Reference tos buttons IDs
         btn1hideCard1show2 = findViewById(R.id.btn_hide_card_1_show_2);
         btn2hideCard2show3 = findViewById(R.id.btn_hide_card_2_show_3);
         btn3hideCard3show4 = findViewById(R.id.btn_hide_card_3_show_4);
@@ -379,9 +380,40 @@ public class QuestionsActivity extends AppCompatActivity {
 
         // Grab user answer from question 6
         RadioGroup question6 = findViewById(R.id.radio_group_question_6);
-        String userAnswer6 = ((RadioButton) findViewById(question6.getCheckedRadioButtonId())).getText().toString(); // Grab user answer from question
+        String userAnswer6 = ((RadioButton) findViewById(question6.getCheckedRadioButtonId())).getText().toString();
 
-        // Grab user answer from comment feedback input
+        // Get each checkboxes status from question 7
+        CheckBox checkbox71 = findViewById(R.id.question_7_checkbox_1);
+        boolean question7checkbox1 = checkbox71.isChecked();
+
+        CheckBox checkbox72 = findViewById(R.id.question_7_checkbox_2);
+        boolean question7checkbox2 = checkbox72.isChecked();
+
+        CheckBox checkbox73 = findViewById(R.id.question_7_checkbox_3);
+        boolean question7checkbox3 = checkbox73.isChecked();
+
+        CheckBox checkbox74 = findViewById(R.id.question_7_checkbox_4);
+        boolean question7checkbox4 = checkbox74.isChecked();
+
+        CheckBox checkbox75 = findViewById(R.id.question_7_checkbox_5);
+        boolean question7checkbox5 = checkbox75.isChecked();
+
+        // Get each user text answer from question 8
+        EditText editTextQuestion8text1 = findViewById(R.id.question_8_answer_1);
+        String question8text1 = editTextQuestion8text1.getText().toString();
+
+        EditText editTextQuestion8text2 = findViewById(R.id.question_8_answer_2);
+        String question8text2 = editTextQuestion8text2.getText().toString();
+
+        EditText editTextQuestion8text3 = findViewById(R.id.question_8_answer_3);
+        String question8text3 = editTextQuestion8text3.getText().toString();
+
+        EditText editTextQuestion8text4 = findViewById(R.id.question_8_answer_4);
+        String question8text4 = editTextQuestion8text4.getText().toString();
+
+        EditText editTextQuestion8text5 = findViewById(R.id.question_8_answer_5);
+        String question8text5 = editTextQuestion8text5.getText().toString();
+
         EditText editTextComment = findViewById(R.id.comment);
         String commentText = editTextComment.getText().toString();
 
@@ -412,6 +444,16 @@ public class QuestionsActivity extends AppCompatActivity {
             intent.putExtra("userAnswer4", userAnswer4);
             intent.putExtra("userAnswer5", userAnswer5);
             intent.putExtra("userAnswer6", userAnswer6);
+            intent.putExtra("question7checkbox1", question7checkbox1);
+            intent.putExtra("question7checkbox2", question7checkbox2);
+            intent.putExtra("question7checkbox3", question7checkbox3);
+            intent.putExtra("question7checkbox4", question7checkbox4);
+            intent.putExtra("question7checkbox5", question7checkbox5);
+            intent.putExtra("question8text1", question8text1);
+            intent.putExtra("question8text2", question8text2);
+            intent.putExtra("question8text3", question8text3);
+            intent.putExtra("question8text4", question8text4);
+            intent.putExtra("question8text5", question8text5);
             intent.putExtra("commentText", commentText);
         startActivity(intent);
     }

@@ -10,13 +10,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SummaryActivity extends AppCompatActivity {
-
+    // Correct answers
     String correctAnswer1 = "4";
     String correctAnswer2 = "Javier Sotomayor";
     String correctAnswer3 = "IAAF";
     String correctAnswer4 = "Dick Fosbury";
     String correctAnswer5 = "Carl Lewis";
     String correctAnswer6 = "4";
+    String correctAnswer8text1 = "VERTICAL";
+    String correctAnswer8text2 = "THROW";
+    String correctAnswer8text3 = "HORIZONTAL";
+    String correctAnswer8text4 = "RACE WALK";
+    String correctAnswer8text5 = "COMBINED EVENTS";
+
+    boolean userQuestion7checkbox1, userQuestion7checkbox2, userQuestion7checkbox3, userQuestion7checkbox4, userQuestion7checkbox5;
+    String userQuestion8text1, userQuestion8text2, userQuestion8text3, userQuestion8text4, userQuestion8text5;
 
     final int pointsPerHit = 60;
     int numberOfHits = 0;
@@ -48,6 +56,19 @@ public class SummaryActivity extends AppCompatActivity {
         String userAnswer4 = userData.getString("userAnswer4");
         String userAnswer5 = userData.getString("userAnswer5");
         String userAnswer6 = userData.getString("userAnswer6");
+
+        boolean userQuestion7checkbox1 = userData.getBoolean("question7checkbox1");
+        boolean userQuestion7checkbox2 = userData.getBoolean("question7checkbox2");
+        boolean userQuestion7checkbox3 = userData.getBoolean("question7checkbox3");
+        boolean userQuestion7checkbox4 = userData.getBoolean("question7checkbox4");
+        boolean userQuestion7checkbox5 = userData.getBoolean("question7checkbox5");
+
+        userQuestion8text1 = userData.getString("question8text1");
+        userQuestion8text2 = userData.getString("question8text2");
+        userQuestion8text3 = userData.getString("question8text3");
+        userQuestion8text4 = userData.getString("question8text4");
+        userQuestion8text5 = userData.getString("question8text5");
+
         String commentText = userData.getString("commentText");
 
         generateSummary(numberOfHits,
@@ -63,7 +84,17 @@ public class SummaryActivity extends AppCompatActivity {
                             userAnswer3,
                             userAnswer4,
                             userAnswer5,
-                            userAnswer6);
+                            userAnswer6,
+                            userQuestion7checkbox1,
+                            userQuestion7checkbox2,
+                            userQuestion7checkbox3,
+                            userQuestion7checkbox4,
+                            userQuestion7checkbox5,
+                            userQuestion8text1,
+                            userQuestion8text2,
+                            userQuestion8text3,
+                            userQuestion8text4,
+                            userQuestion8text5);
     }
 
     /**
@@ -97,43 +128,129 @@ public class SummaryActivity extends AppCompatActivity {
                                     String userAnswer3,
                                     String userAnswer4,
                                     String userAnswer5,
-                                    String userAnswer6){
+                                    String userAnswer6,
+                                    boolean userQuestion7checkbox1,
+                                    boolean userQuestion7checkbox2,
+                                    boolean userQuestion7checkbox3,
+                                    boolean userQuestion7checkbox4,
+                                    boolean userQuestion7checkbox5,
+                                    String userQuestion8text1,
+                                    String userQuestion8text2,
+                                    String userQuestion8text3,
+                                    String userQuestion8text4,
+                                    String userQuestion8text5){
 
         // Send user answer and correct answer to question 1 card at the summary
         TextView userAnswerTextView1 = findViewById(R.id.user_answer_1);
-        userAnswerTextView1.setText(userAnswer1);
+            userAnswerTextView1.setText(userAnswer1);
         TextView correctAnswerTextView1 = findViewById(R.id.correct_answer_1);
-        correctAnswerTextView1.setText(correctAnswer1);
+            correctAnswerTextView1.setText(correctAnswer1);
         // Send user answer and correct answer to question 2 card at the summary
         TextView userAnswerTextView2 = findViewById(R.id.user_answer_2);
-        userAnswerTextView2.setText(userAnswer2);
+            userAnswerTextView2.setText(userAnswer2);
         TextView correctAnswerTextView2 = findViewById(R.id.correct_answer_2);
-        correctAnswerTextView2.setText(correctAnswer2);
+            correctAnswerTextView2.setText(correctAnswer2);
         // Send user answer and correct answer to question 3 card at the summary
         TextView userAnswerTextView3 = findViewById(R.id.user_answer_3);
-        userAnswerTextView3.setText(userAnswer3);
+            userAnswerTextView3.setText(userAnswer3);
         TextView correctAnswerTextView3 = findViewById(R.id.correct_answer_3);
-        correctAnswerTextView3.setText(correctAnswer3);
+            correctAnswerTextView3.setText(correctAnswer3);
         // Send user answer and correct answer to question 4 card at the summary
         TextView userAnswerTextView4 = findViewById(R.id.user_answer_4);
-        userAnswerTextView4.setText(userAnswer4);
+            userAnswerTextView4.setText(userAnswer4);
         TextView correctAnswerTextView4 = findViewById(R.id.correct_answer_4);
-        correctAnswerTextView4.setText(correctAnswer4);
+            correctAnswerTextView4.setText(correctAnswer4);
         // Send user answer and correct answer to question 5 card at the summary
         TextView userAnswerTextView5 = findViewById(R.id.user_answer_5);
-        userAnswerTextView5.setText(userAnswer5);
+            userAnswerTextView5.setText(userAnswer5);
         TextView correctAnswerTextView5 = findViewById(R.id.correct_answer_5);
-        correctAnswerTextView5.setText(correctAnswer5);
+            correctAnswerTextView5.setText(correctAnswer5);
         // Send user answer and correct answer to question 6 card at the summary
         TextView userAnswerTextView6 = findViewById(R.id.user_answer_6);
-        userAnswerTextView6.setText(userAnswer6);
+            userAnswerTextView6.setText(userAnswer6);
         TextView correctAnswerTextView6 = findViewById(R.id.correct_answer_6);
-        correctAnswerTextView6.setText(correctAnswer6);
+            correctAnswerTextView6.setText(correctAnswer6);
+
+        // QUESTION 7
+        if(userQuestion7checkbox1){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img71 = findViewById(R.id.img_question_7_user_option_1);
+            img71.setImageResource(R.drawable.question_hit);
+        }
+        if(userQuestion7checkbox2){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img72 = findViewById(R.id.img_question_7_user_option_2);
+            img72.setImageResource(R.drawable.question_hit);
+        }
+        if(!userQuestion7checkbox3){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img73 = findViewById(R.id.img_question_7_user_option_3);
+            img73.setImageResource(R.drawable.question_missed);
+        }
+        if(userQuestion7checkbox4){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img74 = findViewById(R.id.img_question_7_user_option_4);
+            img74.setImageResource(R.drawable.question_hit);
+        }
+        if(!userQuestion7checkbox5){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img75 = findViewById(R.id.img_question_7_user_option_5);
+            img75.setImageResource(R.drawable.question_missed);
+        }
+
+        // QUESTION 8
+        // Update the correct answers on summary
+        TextView correctAnswerTextView81 = findViewById(R.id.question_8_correct_option_1);
+            correctAnswerTextView81.setText(correctAnswer8text1);
+        TextView correctAnswerTextView82 = findViewById(R.id.question_8_correct_option_2);
+            correctAnswerTextView82.setText(correctAnswer8text2);
+        TextView correctAnswerTextView83 = findViewById(R.id.question_8_correct_option_3);
+            correctAnswerTextView83.setText(correctAnswer8text3);
+        TextView correctAnswerTextView84 = findViewById(R.id.question_8_correct_option_4);
+            correctAnswerTextView84.setText(correctAnswer8text4);
+        TextView correctAnswerTextView85 = findViewById(R.id.question_8_correct_option_5);
+            correctAnswerTextView85.setText(correctAnswer8text5);
+
+        if(userQuestion8text1.equals(correctAnswer8text1)){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img81 = findViewById(R.id.img_question_8_correct_option_1);
+            img81.setImageResource(R.drawable.question_hit);
+        }
+        if(userQuestion8text2.equals(correctAnswer8text2)){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img82 = findViewById(R.id.img_question_8_correct_option_2);
+            img82.setImageResource(R.drawable.question_hit);
+        }
+        if(userQuestion8text3.equals(correctAnswer8text3)){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img83 = findViewById(R.id.img_question_8_correct_option_3);
+            img83.setImageResource(R.drawable.question_hit);
+        }
+        if(userQuestion8text4.equals(correctAnswer8text4)){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img84 = findViewById(R.id.img_question_8_correct_option_4);
+            img84.setImageResource(R.drawable.question_hit);
+        }
+        if(userQuestion8text5.equals(correctAnswer8text5)){
+            numberOfHits++;
+            pointsEarned = pointsEarned + 12;
+            ImageView img85 = findViewById(R.id.img_question_8_correct_option_5);
+            img85.setImageResource(R.drawable.question_hit);
+        }
 
         // Check if use answers are correct or not, updates the number of hits and points earned
         if(userAnswer1.equals(correctAnswer1)){
             numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
+            pointsEarned += 60;
 
             ImageView img1 = findViewById(R.id.img_answer_1);
             img1.setImageResource(R.drawable.question_hit);
@@ -144,7 +261,7 @@ public class SummaryActivity extends AppCompatActivity {
         }
         if(userAnswer2.equals(correctAnswer2)){
             numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
+            pointsEarned += pointsPerHit;
 
             ImageView img2 = findViewById(R.id.img_answer_2);
             img2.setImageResource(R.drawable.question_hit);
@@ -155,7 +272,7 @@ public class SummaryActivity extends AppCompatActivity {
         }
         if(userAnswer3.equals(correctAnswer3)){
             numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
+            pointsEarned += pointsPerHit;
 
             ImageView img3 = findViewById(R.id.img_answer_3);
             img3.setImageResource(R.drawable.question_hit);
@@ -166,7 +283,7 @@ public class SummaryActivity extends AppCompatActivity {
         }
         if(userAnswer4.equals(correctAnswer4)){
             numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
+            pointsEarned += pointsPerHit;
 
             ImageView img4 = findViewById(R.id.img_answer_4);
             img4.setImageResource(R.drawable.question_hit);
@@ -177,7 +294,7 @@ public class SummaryActivity extends AppCompatActivity {
         }
         if(userAnswer5.equals(correctAnswer5)){
             numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
+            pointsEarned += pointsPerHit;
 
             ImageView img5 = findViewById(R.id.img_answer_5);
             img5.setImageResource(R.drawable.question_hit);
@@ -188,7 +305,7 @@ public class SummaryActivity extends AppCompatActivity {
         }
         if(userAnswer6.equals(correctAnswer6)){
             numberOfHits++;
-            pointsEarned = numberOfHits * pointsPerHit;
+            pointsEarned += pointsPerHit;
 
             TextView textAnswerTextView6 = findViewById(R.id.summary_bottom_layout_text_6);
             textAnswerTextView6.setText(textHit);
@@ -295,6 +412,16 @@ public class SummaryActivity extends AppCompatActivity {
                                             userAnswer4,
                                             userAnswer5,
                                             userAnswer6,
+                                            userQuestion7checkbox1,
+                                            userQuestion7checkbox2,
+                                            userQuestion7checkbox3,
+                                            userQuestion7checkbox4,
+                                            userQuestion7checkbox5,
+                                            userQuestion8text1,
+                                            userQuestion8text2,
+                                            userQuestion8text3,
+                                            userQuestion8text4,
+                                            userQuestion8text5,
                                             commentText,
                                             sendMeACopy,
                                             sendMeFuture,
@@ -356,11 +483,20 @@ public class SummaryActivity extends AppCompatActivity {
                                     String correctAnswer4,
                                     String correctAnswer5,
                                     String correctAnswer6,
+                                    boolean userQuestion7checkbox1,
+                                    boolean userQuestion7checkbox2,
+                                    boolean userQuestion7checkbox3,
+                                    boolean userQuestion7checkbox4,
+                                    boolean userQuestion7checkbox5,
+                                    String userQuestion8text1,
+                                    String userQuestion8text2,
+                                    String userQuestion8text3,
+                                    String userQuestion8text4,
+                                    String userQuestion8text5,
                                     String commentText,
                                     String sendMeACopy,
                                     String sendMeFuture,
                                     String isAthleteActive){
-
 
         String userSummaryData = getString(R.string.my_quiz_athletics_result);
 
@@ -409,6 +545,29 @@ public class SummaryActivity extends AppCompatActivity {
         userSummaryData += "\n " + userAnswer6;
         userSummaryData += "\n " + getString(R.string.correct_answer);
         userSummaryData += "\n " + correctAnswer6;
+
+        userSummaryData += "\n\n " + getString(R.string.question_7_answer_1) + ": " + userQuestion7checkbox1;
+        userSummaryData += "\n " + getString(R.string.question_7_answer_2) + ": " + userQuestion7checkbox2;
+        userSummaryData += "\n " + getString(R.string.question_7_answer_3) + ": " + userQuestion7checkbox3;
+        userSummaryData += "\n " + getString(R.string.question_7_answer_4) + ": " + userQuestion7checkbox4;
+        userSummaryData += "\n " + getString(R.string.question_7_answer_5) + ": " + userQuestion7checkbox5;
+
+        userSummaryData += "\n\n " + getString(R.string.question_8_body);
+        userSummaryData += "\n\n " + getString(R.string.question_8_answer_1_title);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userQuestion8text1;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer8text1;
+        userSummaryData += "\n\n " + getString(R.string.question_8_answer_2_title);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userQuestion8text2;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer8text2;
+        userSummaryData += "\n\n " + getString(R.string.question_8_answer_3_title);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userQuestion8text3;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer8text3;
+        userSummaryData += "\n\n " + getString(R.string.question_8_answer_4_title);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userQuestion8text4;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer8text4;
+        userSummaryData += "\n\n " + getString(R.string.question_8_answer_5_title);
+        userSummaryData += "\n " + getString(R.string.your_answer) + " " + userQuestion8text5;
+        userSummaryData += "\n " + getString(R.string.correct_answer) + " " + correctAnswer8text5;
 
         userSummaryData += "\n\n " + getString(R.string.i_wish_a_copy);
         userSummaryData += "\n " + sendMeACopy;

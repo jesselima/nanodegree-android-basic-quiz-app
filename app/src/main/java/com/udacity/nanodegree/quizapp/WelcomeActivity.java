@@ -24,7 +24,7 @@ public class WelcomeActivity extends AppCompatActivity {
         EditText editTextName = findViewById(R.id.name);
         String name = editTextName.getText().toString();
             if(name.isEmpty()){
-                Toast.makeText(this, "You must type your name", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.you_must_type_your_name, Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -32,7 +32,7 @@ public class WelcomeActivity extends AppCompatActivity {
         EditText editTextEmail = findViewById(R.id.email);
         String email = editTextEmail.getText().toString();
             if(email.isEmpty()){
-                Toast.makeText(this, "You must type your email", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.you_must_type_your_email, Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -48,7 +48,7 @@ public class WelcomeActivity extends AppCompatActivity {
         RadioGroup radioGroupAthleteActive = findViewById(R.id.radio_group_active_athlete);
         String isAthleteActive = "";
             if (radioGroupAthleteActive.getCheckedRadioButtonId() == -1){
-                Toast.makeText(this, "Select if you are athlete or not.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.select_if_you_are_athlete, Toast.LENGTH_SHORT).show();
                 return;
             }else {
                 isAthleteActive = ((RadioButton) findViewById(radioGroupAthleteActive.getCheckedRadioButtonId())).getText().toString();
@@ -57,12 +57,12 @@ public class WelcomeActivity extends AppCompatActivity {
         EditText editTextAge = findViewById(R.id.age);
         String myAge = editTextAge.getText().toString();
             if (myAge.isEmpty()) {
-                Toast.makeText(this, "Age can not be empty.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.age_can_not_be_empty, Toast.LENGTH_SHORT).show();
                 return;
             }
             int age = Integer.parseInt(myAge);
             if (age < 5 ) {
-                Toast.makeText(this, "Your age must be greater than 5.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.age_must_be_greater_than, Toast.LENGTH_SHORT).show();
                 return;
             }
 
