@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SummaryActivity extends AppCompatActivity {
     // Correct answers
@@ -95,6 +96,7 @@ public class SummaryActivity extends AppCompatActivity {
                             userQuestion8text3,
                             userQuestion8text4,
                             userQuestion8text5);
+
     }
 
     /**
@@ -315,47 +317,53 @@ public class SummaryActivity extends AppCompatActivity {
             img6.setImageResource(R.drawable.question_hit);
         }
 
-        // update the points earned on the summary
-        TextView pointsTextView = findViewById(R.id.points_earned);
-        pointsTextView.setText(String.valueOf(pointsEarned));
-        // update the number of hits  on the summary
+        // update the points earned on the summary and show it as a toast message
         TextView hitsTextView = findViewById(R.id.number_of_hit_questions);
         hitsTextView.setText(String.valueOf(numberOfHits));
+        Toast.makeText(this, getString(R.string.you_made) + numberOfHits + getString(R.string.correct_hits), Toast.LENGTH_LONG).show();
+
+        // update the number of hits  on the summary and show it as a toast message
+        TextView pointsTextView = findViewById(R.id.points_earned);
+        pointsTextView.setText(String.valueOf(pointsEarned));
+        Toast.makeText(this, getString(R.string.earned) + pointsEarned + " points", Toast.LENGTH_LONG).show();
 
         // Update the summary header with text and image according to amount of questions hit
-        if(numberOfHits < 1) {
+        if(numberOfHits < 3) {
             ImageView imgFeeling = findViewById(R.id.img_feeling);
-            imgFeeling.setImageResource(R.drawable.feeling_not_seen);
-
+                imgFeeling.setImageResource(R.drawable.feeling_not_seen);
             TextView textFelling = findViewById(R.id.text_feeling);
-            textFelling.setText(feelingNotSeen);
-
-        }else if(numberOfHits <= 2){
+                textFelling.setText(feelingNotSeen);
+            Toast.makeText(this, R.string.not_see_this, Toast.LENGTH_LONG).show();
+        }else if(numberOfHits <= 6){
             ImageView imgFeeling = findViewById(R.id.img_feeling);
-            imgFeeling.setImageResource(R.drawable.feeling_crazy);
-
+                imgFeeling.setImageResource(R.drawable.feeling_crazy);
             TextView textFelling = findViewById(R.id.text_feeling);
-            textFelling.setText(feelingCrazy);
-
-        }else if(numberOfHits <=4){
+                textFelling.setText(feelingCrazy);
+            Toast.makeText(this, R.string.bad_result, Toast.LENGTH_LONG).show();
+        }else if(numberOfHits <= 10){
             ImageView imgFeeling = findViewById(R.id.img_feeling);
-            imgFeeling.setImageResource(R.drawable.feeling_bad);
-
+                imgFeeling.setImageResource(R.drawable.feeling_bad);
             TextView textFelling = findViewById(R.id.text_feeling);
-            textFelling.setText(feelingBad);
-
-        }else if(numberOfHits == 5){
+                textFelling.setText(feelingBad);
+            Toast.makeText(this, R.string.not_so_bad, Toast.LENGTH_LONG).show();
+        }else if(numberOfHits <= 12){
             ImageView imgFeeling = findViewById(R.id.img_feeling);
-            imgFeeling.setImageResource(R.drawable.feeling_cool);
-
+                imgFeeling.setImageResource(R.drawable.feeling_cool);
             TextView textFelling = findViewById(R.id.text_feeling);
-            textFelling.setText(feelingCool);
+                textFelling.setText(feelingCool);
+            Toast.makeText(this, R.string.great_result, Toast.LENGTH_LONG).show();
+        }else if(numberOfHits <= 15){
+            ImageView imgFeeling = findViewById(R.id.img_feeling);
+                imgFeeling.setImageResource(R.drawable.feeling_ohhhhh);
+            TextView textFelling = findViewById(R.id.text_feeling);
+                textFelling.setText(feelingCool);
+            Toast.makeText(this, R.string.awesome, Toast.LENGTH_LONG).show();
         }else{
             ImageView imgFeeling = findViewById(R.id.img_feeling);
-            imgFeeling.setImageResource(R.drawable.feeling_perfect);
-
+                imgFeeling.setImageResource(R.drawable.feeling_perfect);
             TextView textFelling = findViewById(R.id.text_feeling);
-            textFelling.setText(feelingAwesome);
+                textFelling.setText(feelingAwesome);
+            Toast.makeText(this, R.string.perfect_result, Toast.LENGTH_LONG).show();
         }
     }
 

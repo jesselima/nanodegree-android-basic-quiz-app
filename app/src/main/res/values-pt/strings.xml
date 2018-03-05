@@ -118,4 +118,13 @@
     <string name="select_if_you_are_athlete">Select if you are athlete or not.</string>
     <string name="age_can_not_be_empty">Age can not be empty.</string>
     <string name="age_must_be_greater_than">Your age must be greater than 5.</string>
+    <string name="you_made">You made</string>
+    <string name="correct_hits">correct hits</string>
+    <string name="and_earned">and earned</string>
+    <string name="i_did_not_see_this">I did not see this.</string>
+    <string name="bad_result">That is a bad result.</string>
+    <string name="not_so_bad">Not so bad.</string>
+    <string name="great_result">Nice! That is a great result.</string>
+    <string name="awesome">Awesome!</string>
+    <string name="perfect_result">Perfect! You hit all the questions!</string>
 </resources>

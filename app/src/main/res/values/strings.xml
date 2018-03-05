@@ -87,10 +87,10 @@
     <string name="your_answer">Your answer:</string>
     <string name="am_i_active_athlete">Am I an active athlete?</string>
     <string name="feeling_not_seen">OK. Don\'t worry. I din\'t see this!</string>
-    <string name="feeling_bad">Ops! You really need do research!</string>
+    <string name="feeling_crazy">Are you kidding me? That is a bad result.</string>
+    <string name="feeling_bad">Ops! Not so bad but You need to do some research.</string>
     <string name="feeling_cool">Nice! You really know about athletics.</string>
-    <string name="feeling_crazy">Are you kidding me? You better try another quiz. This one is not for you.</string>
-    <string name="feeling_awesome">Perfect! You hit all questions. Congratulations!</string>
+    <string name="feeling_awesome">WoW! Perfect! You hit all questions. Congratulations!</string>
     <string name="user_answer_here">User answer</string>
     <string name="correct_answer_here">Correct answer here</string>
     <string name="you_missed_this_one">You\'ve missed this one!</string>
@@ -114,4 +114,13 @@
     <string name="select_if_you_are_athlete">Select if you are athlete or not.</string>
     <string name="age_can_not_be_empty">Age can not be empty.</string>
     <string name="age_must_be_greater_than">Your age must be greater than 5.</string>
+    <string name="you_made">You made</string>
+    <string name="correct_hits">correct hits</string>
+    <string name="earned">and earned</string>
+    <string name="not_see_this">I did not see this.</string>
+    <string name="bad_result">That is a bad result.</string>
+    <string name="not_so_bad">Not so bad.</string>
+    <string name="great_result">Nice! That is a great result.</string>
+    <string name="awesome">Awesome!</string>
+    <string name="perfect_result">Perfect! You hit all the questions!</string>
 </resources>
